@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Sites.Gu | Landing Pages de Alta Conversão e Agendamento Inteligente</title>
-  <meta name="description" content="Transforme visitantes do seu Instagram em clientes agendados todos os dias. Landing Pages ultrarrápidas com agendamento inteligente para negócios locais." />
+  <meta name="description" content="Transforme visitas do seu Instagram em agendamentos prontos no WhatsApp sem pagar mensalidade de plataforma. Landing Pages Mobile-First para negócios locais." />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Plus Jakarta Sans (Títulos) & Inter (Leitura UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -44,7 +44,7 @@
   </script>
 
   <style>
-    /* Base Styles & Typography */
+    /* Configurações base e prevenção de rolagem horizontal */
     html, body {
       background-color: #F5F6F8;
       color: #0F213A;
@@ -57,17 +57,17 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    /* Subtle Architectural Grid Background for Hero */
+    /* Grade arquitetônica sutil para a Hero Section */
     .hero-grid {
       background-image:
-        radial-gradient(circle at 82% 18%, rgba(0, 180, 240, 0.11) 0%, transparent 45%),
+        radial-gradient(circle at 82% 18%, rgba(0, 180, 240, 0.12) 0%, transparent 45%),
         radial-gradient(circle at 12% 82%, rgba(15, 33, 58, 0.05) 0%, transparent 40%),
         linear-gradient(to right, rgba(15, 33, 58, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(15, 33, 58, 0.03) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 34px 34px, 34px 34px;
     }
 
-    /* Custom Range Sliders (Touch-Friendly 28px Thumb) */
+    /* Sliders customizados para toque confortável no celular (28px thumb) */
     input[type="range"].sg-slider {
       -webkit-appearance: none;
       appearance: none;
@@ -108,7 +108,7 @@
       cursor: pointer;
     }
 
-    /* Smooth Scroll Reveal */
+    /* Animação suave de entrada ao rolar a página */
     .reveal {
       opacity: 0;
       transform: translateY(20px);
@@ -120,7 +120,7 @@
       transform: translateY(0);
     }
 
-    /* Floating Animations */
+    /* Flutuação dos badges ao redor do mockup */
     @keyframes floatSlow {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-6px); }
@@ -132,7 +132,7 @@
       animation: floatSlow 5.2s ease-in-out 1.4s infinite;
     }
 
-    /* Clean Scrollbars inside Modal */
+    /* Scrollbar discreta dentro do modal de prévias */
     .preview-scroll::-webkit-scrollbar {
       width: 6px;
     }
@@ -148,7 +148,7 @@
 <body class="antialiased selection:bg-brand-cyan/20 selection:text-brand-navy">
 
   <!-- ===================================================================== -->
-  <!-- 1. NAVBAR FIXA LIMPA + MENU GAVETA MOBILE-FIRST                       -->
+  <!-- 1. CABEÇALHO FIXO RESPONSIVO + MENU GAVETA MOBILE-FIRST               -->
   <!-- ===================================================================== -->
   <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-brand-border/90">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,30 +177,30 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
+        <!-- Navegação Desktop -->
         <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
-          <a href="#solucoes" class="hover:text-brand-navy transition-colors py-2">Soluções</a>
-          <a href="#portfolio" class="hover:text-brand-navy transition-colors py-2">Portfólio &amp; Prévias</a>
-          <a href="#simulador" class="hover:text-brand-navy transition-colors py-2">Simulador</a>
-          <a href="#processo" class="hover:text-brand-navy transition-colors py-2">Processo</a>
+          <a href="#como-funciona" class="hover:text-brand-navy transition-colors py-2">Como Funciona</a>
+          <a href="#previas" class="hover:text-brand-navy transition-colors py-2">Prévias ao Vivo</a>
+          <a href="#simulador" class="hover:text-brand-navy transition-colors py-2">Simulador ROI</a>
           <a href="#planos" class="hover:text-brand-navy transition-colors py-2">Planos</a>
+          <a href="#faq" class="hover:text-brand-navy transition-colors py-2">FAQ</a>
         </nav>
 
-        <!-- Header Actions -->
+        <!-- Botão CTA Principal + Gatilho Gaveta Mobile -->
         <div class="flex items-center gap-2.5 sm:gap-3">
           <a
-            href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20quero%20pedir%20meu%20site."
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2.5 min-h-[42px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-xs sm:text-sm shadow-sm transition-all duration-200 hover:-translate-y-0.5"
           >
-            <span>Solicitar Orçamento</span>
+            <span>Pedir Meu Site</span>
             <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
           </a>
 
-          <!-- Mobile Drawer Trigger Button -->
+          <!-- Botão Menu Mobile -->
           <button
             id="mobileDrawerOpenBtn"
             type="button"
@@ -217,7 +217,7 @@
     </div>
   </header>
 
-  <!-- Mobile Slide-Over Drawer (Gaveta Fluida para Celular) -->
+  <!-- Gaveta Deslizante Mobile (Slide-Over Drawer) -->
   <div id="mobileDrawerBackdrop" class="fixed inset-0 z-50 bg-brand-navy/60 backdrop-blur-xs hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
   <aside
     id="mobileDrawer"
@@ -225,7 +225,7 @@
     aria-label="Menu Mobile"
   >
     <div>
-      <!-- Drawer Header -->
+      <!-- Cabeçalho da Gaveta -->
       <div class="px-5 h-16 border-b border-brand-border flex items-center justify-between">
         <span class="font-display font-extrabold text-lg text-brand-navy">
           SITES<span class="text-brand-cyan">.GU</span>
@@ -242,73 +242,73 @@
         </button>
       </div>
 
-      <!-- Large Touch-Friendly Links -->
+      <!-- Links Otimizados para Toque -->
       <nav class="p-4 space-y-1.5">
-        <a href="#solucoes" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
-          <span>Soluções</span>
-          <span class="text-brand-cyan text-sm">→</span>
-        </a>
-        <a href="#portfolio" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
-          <span>Portfólio &amp; 4 Prévias</span>
-          <span class="px-2 py-0.5 rounded-md bg-brand-cyan/15 text-brand-navy text-xs font-extrabold">Ao Vivo</span>
-        </a>
-        <a href="#simulador" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
-          <span>Simulador de Faturamento</span>
-          <span class="text-brand-cyan text-sm">→</span>
-        </a>
-        <a href="#processo" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+        <a href="#como-funciona" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
           <span>Como Funciona</span>
           <span class="text-brand-cyan text-sm">→</span>
         </a>
+        <a href="#previas" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Prévias ao Vivo</span>
+          <span class="px-2 py-0.5 rounded-md bg-brand-cyan/15 text-brand-navy text-xs font-extrabold">4 Modelos</span>
+        </a>
+        <a href="#simulador" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Simulador ROI</span>
+          <span class="text-brand-cyan text-sm">→</span>
+        </a>
         <a href="#planos" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
-          <span>Planos Sob Medida</span>
+          <span>Planos &amp; Valores</span>
+          <span class="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-xs font-extrabold">Lançamento</span>
+        </a>
+        <a href="#faq" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>FAQ (Dúvidas)</span>
           <span class="text-brand-cyan text-sm">→</span>
         </a>
       </nav>
     </div>
 
-    <!-- Drawer Bottom CTA -->
+    <!-- Rodapé da Gaveta -->
     <div class="p-5 border-t border-brand-border bg-brand-bg">
       <a
-        href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20menu%20mobile%20do%20site%20da%20Sites.Gu%20e%20quero%20um%20or%C3%A7amento."
+        href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vim%20pelo%20menu%20mobile%20da%20Sites.Gu%20e%20quero%20pedir%20meu%20site."
         target="_blank"
         rel="noopener noreferrer"
         class="w-full flex items-center justify-center gap-2.5 py-4 px-5 rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm shadow-cyan transition-all"
       >
-        <span>Falar no WhatsApp</span>
+        <span>Pedir Meu Site no WhatsApp</span>
       </a>
       <p class="text-center text-xs text-slate-500 mt-2.5 font-medium">(11) 93396-6500</p>
     </div>
   </aside>
 
   <!-- ===================================================================== -->
-  <!-- 2. HERO SECTION DE ALTA CONVERSÃO + SMARTPHONE INTERATIVO AO VIVO     -->
+  <!-- 2. HERO SECTION + SMARTPHONE INTERATIVO FUNCIONAL NA PRIMEIRA DOBRA   -->
   <!-- ===================================================================== -->
   <section class="hero-grid relative pt-8 pb-14 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-24 border-b border-brand-border/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- Left Conversion Copy -->
+        <!-- Copy Principal de Alta Conversão -->
         <div class="lg:col-span-6 text-left">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-border shadow-xs mb-5">
             <span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"></span>
             <span class="text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider text-brand-navy">
-              Páginas Mobile-First + Agendamento Inteligente
+              Sem Mensalidade de Plataforma • Mobile-First
             </span>
           </div>
 
           <h1 class="font-display font-extrabold text-[30px] sm:text-4xl lg:text-[46px] text-brand-navy leading-[1.14] tracking-tight mb-5">
-            Transforme visitantes do seu Instagram em <span class="text-brand-cyan">clientes agendados todos os dias.</span>
+            Transforme visitas do seu Instagram em <span class="text-brand-cyan">agendamentos prontos no WhatsApp</span> — sem pagar mensalidade.
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-xl">
-            Uma Landing Page ultrarrápida com fluxo de agendamento inteligente apresenta seus serviços, filtra curiosos no direct e envia o cliente pronto direto para o seu WhatsApp.
+            Substitua o link genérico da sua bio por uma Landing Page ultrarrápida com agendamento inteligente. Seu cliente escolhe o serviço, vê avaliações reais e já chega no seu WhatsApp pronto para confirmar.
           </p>
 
-          <!-- Primary & Secondary CTAs -->
+          <!-- Botões de Ação -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
             <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Quero%20uma%20Landing%20Page%20com%20agendamento%20inteligente%20para%20o%20meu%20neg%C3%B3cio."
+              href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vi%20o%20site%20da%20Sites.Gu%20e%20quero%20uma%20Landing%20Page%20com%20agendamento%20para%20o%20meu%20neg%C3%B3cio."
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-2.5 px-6 py-4 min-h-[54px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm sm:text-base shadow-cyan transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.99]"
@@ -320,44 +320,44 @@
             </a>
 
             <a
-              href="#portfolio"
+              href="#previas"
               class="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[54px] rounded-2xl bg-white hover:bg-slate-50 text-brand-navy border-2 border-brand-navy/15 hover:border-brand-navy font-display font-bold text-sm sm:text-base transition-all duration-200"
             >
-              <span>Testar 4 Prévias Interativas</span>
+              <span>Testar Prévias ao Vivo</span>
             </a>
           </div>
 
-          <!-- Key Trust Badges -->
+          <!-- Selos de Confiança -->
           <div class="mt-7 pt-6 border-t border-brand-border/80 grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm text-slate-600 font-medium">
             <div class="flex items-center gap-2">
               <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
               </svg>
-              <span>100% Adaptado ao Celular</span>
+              <span>Pagamento Único (A partir de R$ 197)</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
               </svg>
-              <span>Zero Mensalidade de Servidor</span>
+              <span>Entrega Rápida em 24h a 48h</span>
             </div>
           </div>
         </div>
 
-        <!-- Right Interactive Smartphone Mockup (Live Mini-Booking Demo) -->
+        <!-- Mockup Interativo de Smartphone na Primeira Dobra -->
         <div class="lg:col-span-6 flex justify-center relative">
-          <!-- Floating Callout Top-Left -->
+          <!-- Badge Flutuante Superior Esquerdo -->
           <div class="animate-float-slow hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white border border-brand-border shadow-soft absolute top-6 -left-2 xl:left-4 z-20">
             <div class="w-9 h-9 rounded-xl bg-brand-cyan/15 text-brand-cyan flex items-center justify-center font-display font-extrabold text-xs">
               3x
             </div>
             <div>
-              <p class="font-display font-bold text-xs text-brand-navy">Mais Agendamentos</p>
-              <p class="text-[11px] text-slate-500">Sem perder tempo no Direct</p>
+              <p class="font-display font-bold text-xs text-brand-navy">Mais Conversão</p>
+              <p class="text-[11px] text-slate-500">Sem curiosos no Direct</p>
             </div>
           </div>
 
-          <!-- Floating Callout Bottom-Right -->
+          <!-- Badge Flutuante Inferior Direito -->
           <div class="animate-float-delayed hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-brand-navy text-white shadow-navy absolute bottom-8 -right-2 xl:right-4 z-20">
             <div class="w-9 h-9 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
@@ -366,20 +366,19 @@
             </div>
             <div>
               <p class="font-display font-bold text-xs text-white">Pronto para a Bio</p>
-              <p class="text-[11px] text-slate-300">Carregamento instantâneo</p>
+              <p class="text-[11px] text-slate-300">Abre na hora no 4G</p>
             </div>
           </div>
 
-          <!-- Smartphone Chassis -->
+          <!-- Chassi do Smartphone -->
           <div class="w-full max-w-[360px] bg-brand-navy rounded-[40px] p-3 shadow-phone border-4 border-slate-800 relative z-10">
-            <!-- Dynamic Island / Speaker Notch -->
             <div class="w-24 h-5 bg-slate-950 rounded-full mx-auto mb-2.5 flex items-center justify-end px-2.5">
               <span class="w-2 h-2 rounded-full bg-brand-cyan/60"></span>
             </div>
 
-            <!-- Phone Screen -->
+            <!-- Tela Interativa -->
             <div class="bg-white rounded-[30px] overflow-hidden border border-slate-200">
-              <!-- Mini Browser Address Bar -->
+              <!-- Barra de Endereço -->
               <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-200/80 flex items-center justify-between text-[11px] text-slate-500">
                 <span class="font-semibold text-brand-navy flex items-center gap-1">
                   <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
@@ -387,20 +386,20 @@
                   </svg>
                   agendar.seunegocio.com.br
                 </span>
-                <span class="px-2 py-0.5 rounded-full bg-brand-cyan/15 text-brand-navy font-bold text-[10px]">Ao Vivo</span>
+                <span class="px-2 py-0.5 rounded-full bg-brand-cyan/15 text-brand-navy font-bold text-[10px]">Teste Aqui</span>
               </div>
 
-              <!-- Interactive Live Booking Widget Inside Hero Phone -->
+              <!-- Widget Funcional de Agendamento -->
               <div class="p-4 sm:p-5 space-y-4">
                 <div class="flex items-center justify-between">
                   <div>
-                    <p class="text-[10px] font-bold uppercase tracking-wider text-brand-cyan">Agendamento Inteligente</p>
-                    <h2 class="font-display font-extrabold text-base text-brand-navy">Escolha seu procedimento</h2>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-brand-cyan">Simulação Interativa</p>
+                    <h2 class="font-display font-extrabold text-base text-brand-navy">1. Escolha o serviço</h2>
                   </div>
                   <span class="text-xs font-bold text-amber-500">★ 5.0</span>
                 </div>
 
-                <!-- Step 1: Select Service -->
+                <!-- Seleção de Serviço -->
                 <div class="space-y-2" id="heroPhoneServices">
                   <button
                     type="button"
@@ -409,7 +408,7 @@
                   >
                     <div>
                       <p class="font-display font-bold text-xs text-brand-navy">Volume Brasileiro</p>
-                      <p class="text-[10px] text-slate-500">Duração: 1h30 • Manutenção 20 dias</p>
+                      <p class="text-[10px] text-slate-500">Duração: 1h30 • Retenção alta</p>
                     </div>
                     <span class="font-display font-extrabold text-xs text-brand-navy">R$ 130</span>
                   </button>
@@ -421,15 +420,15 @@
                   >
                     <div>
                       <p class="font-display font-bold text-xs text-brand-navy">Design + Henna</p>
-                      <p class="text-[10px] text-slate-500">Duração: 40min • Visagismo facial</p>
+                      <p class="text-[10px] text-slate-500">Duração: 40min • Visagismo</p>
                     </div>
                     <span class="font-display font-extrabold text-xs text-slate-700">R$ 55</span>
                   </button>
                 </div>
 
-                <!-- Step 2: Select Time Slot -->
+                <!-- Seleção de Horário -->
                 <div>
-                  <p class="text-[11px] font-bold text-brand-navy mb-2">Horários disponíveis hoje:</p>
+                  <p class="text-[11px] font-bold text-brand-navy mb-2">2. Escolha o horário hoje:</p>
                   <div class="grid grid-cols-3 gap-1.5" id="heroPhoneTimes">
                     <button type="button" data-time="14:00" class="hero-phone-time py-2 rounded-lg bg-brand-navy text-white font-display font-bold text-xs cursor-pointer">14:00</button>
                     <button type="button" data-time="16:30" class="hero-phone-time py-2 rounded-lg bg-brand-bg text-brand-navy hover:bg-slate-200 font-display font-bold text-xs cursor-pointer">16:30</button>
@@ -437,7 +436,7 @@
                   </div>
                 </div>
 
-                <!-- Live Summary & Action -->
+                <!-- Resumo Automático Gerado -->
                 <div class="p-3 rounded-2xl bg-brand-bg border border-brand-border">
                   <p class="text-[10px] text-slate-500 font-medium">Resumo pronto para o WhatsApp:</p>
                   <p id="heroPhoneSummary" class="text-xs font-bold text-brand-navy mt-0.5">
@@ -446,11 +445,13 @@
                 </div>
 
                 <a
-                  href="#portfolio"
+                  id="heroPhoneWhatsAppBtn"
+                  href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Testei%20a%20simula%C3%A7%C3%A3o%20do%20celular%20no%20site%20da%20Sites.Gu%20(Volume%20Brasileiro%20%E2%80%94%20R%24%20130%20%E2%80%A2%20Hoje%20%C3%A0s%2014%3A00)%20e%20quero%20um%20site%20assim!"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="w-full py-3 px-4 rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-cyan transition-all"
                 >
-                  <span>Testar Prévias Completas</span>
-                  <span>↓</span>
+                  <span>Enviar Pedido Teste no WhatsApp →</span>
                 </a>
               </div>
             </div>
@@ -462,33 +463,34 @@
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 3. DOR VS. SOLUÇÃO (COMPARATIVO VISUAL CLARO)                         -->
+  <!-- 3. COMPARATIVO DOR VS. SOLUÇÃO + COMO FUNCIONA                        -->
   <!-- ===================================================================== -->
-  <section id="solucoes" class="py-16 sm:py-24">
+  <section id="como-funciona" class="py-16 sm:py-24 scroll-mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16 reveal">
-        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Pare de perder vendas no Direct</span>
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Onde você está perdendo vendas</span>
         <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
-          Por que um link comum na bio faz você perder dinheiro
+          Link na Bio Comum vs. Padrão Sites.Gu
         </h2>
         <p class="text-slate-600 text-sm sm:text-base">
-          Quando o cliente clica na sua bio e encontra uma lista fria de botões ou cai direto em um chat sem informações, a maioria desiste antes mesmo de perguntar o preço.
+          Quando o visitante clica na sua bio e encontra apenas botões frios ou precisa mandar mensagem perguntando preço, a maioria desiste antes de agendar.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+      <!-- Grid Comparativo -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch mb-16 sm:mb-20">
         
-        <!-- Left Card: Linktree / Direct Manual (Pain) -->
+        <!-- Lado Esquerdo: Dor (Link Comum / Direct Manual) -->
         <div class="reveal bg-white rounded-3xl p-6 sm:p-9 border border-rose-200/80 shadow-soft flex flex-col justify-between">
           <div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 text-rose-700 font-display font-bold text-xs mb-5">
-              <span>✕ Modelo Antigo</span>
+              <span>✕ Modelo Tradicional</span>
             </div>
             <h3 class="font-display font-extrabold text-xl sm:text-2xl text-slate-800 mb-3">
-              Linktree Comum / Direct Manual
+              Link na Bio Comum / Atendimento Manual no Direct
             </h3>
             <p class="text-sm text-slate-500 mb-6">
-              Você perde horas respondendo as mesmas perguntas básicas e vê clientes esfriarem enquanto esperam resposta.
+              Alto desgaste respondendo sempre as mesmas dúvidas enquanto clientes impacientes fecham com o concorrente.
             </p>
 
             <ul class="space-y-4 text-sm text-slate-600">
@@ -498,26 +500,26 @@
               </li>
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
-                <span><strong>Visual genérico:</strong> Lista de links sem fotos, sem provas sociais e sem valorizar seu trabalho.</span>
+                <span><strong>Visual genérico:</strong> Lista fria de links sem fotos, sem avaliações e sem valorizar seu serviço.</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
-                <span><strong>Atendimento lento:</strong> Vai-e-volta de mensagens para combinar serviço, data e horário.</span>
+                <span><strong>Demora no fechamento:</strong> Dezenas de mensagens trocadas só para combinar serviço, dia e horário.</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
-                <span><strong>Baixo retorno em anúncios:</strong> Pagar tráfego para mandar visitante para uma página amadora queima verba.</span>
+                <span><strong>Mensalidades recorrentes:</strong> Ferramentas limitadas que cobram todo mês em dólar ou real.</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-rose-600">
-            <span>Taxa média de conversão: ~1,5% a 2%</span>
-            <span>Alto desgaste operacional</span>
+            <span>Conversão média: ~1,5% a 2%</span>
+            <span>Perda diária de agendamentos</span>
           </div>
         </div>
 
-        <!-- Right Card: Landing Page Sites.Gu com Agendamento Inteligente (Solution) -->
+        <!-- Lado Direito: Solução (Padrão Sites.Gu + Agendamento Inteligente) -->
         <div class="reveal bg-brand-navy text-white rounded-3xl p-6 sm:p-9 border-2 border-brand-cyan shadow-navy flex flex-col justify-between relative overflow-hidden">
           <div class="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-brand-cyan/15 blur-2xl pointer-events-none"></div>
           
@@ -526,74 +528,102 @@
               <span>✓ Padrão Sites.Gu</span>
             </div>
             <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white mb-3">
-              Landing Page Sites.Gu + Agendamento Inteligente
+              Padrão Sites.Gu + Agendamento Inteligente
             </h3>
             <p class="text-sm text-slate-300 mb-6">
-              Uma máquina de conversão 24h no link da sua bio: apresenta sua autoridade, organiza sua agenda e entrega o cliente pronto no WhatsApp.
+              Sua vitrine profissional funcionando 24h na bio do Instagram: apresenta preços, gera confiança e entrega o pedido pronto no WhatsApp.
             </p>
 
             <ul class="space-y-4 text-sm text-slate-200">
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
-                <span><strong>Agendamento em 3 toques:</strong> O cliente escolhe procedimento, dia e horário antes mesmo de abrir o WhatsApp.</span>
+                <span><strong>Agendamento em 3 toques:</strong> O cliente escolhe procedimento, dia e horário antes de abrir o WhatsApp.</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
-                <span><strong>Autoridade e confiança imediata:</strong> Avaliações 5 estrelas, localização no Google Maps e portfólio visual.</span>
+                <span><strong>Prova social imediata:</strong> Avaliações 5 estrelas do Google, rota no Maps e galeria de resultados.</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
-                <span><strong>Mensagem estruturada no WhatsApp:</strong> Você recebe nome, serviço escolhido, valor e horário pronto para confirmar.</span>
+                <span><strong>Pedido formatado no WhatsApp:</strong> Você recebe nome, serviço, valor e horário prontos para confirmar.</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
-                <span><strong>Ultrarrápida no 4G/5G:</strong> Construída Mobile-First para abrir instantaneamente dentro do navegador do Instagram.</span>
+                <span><strong>Pagamento único:</strong> Você investe uma única vez e não fica refém de mensalidades de plataforma.</span>
               </li>
             </ul>
           </div>
 
           <div class="relative z-10 mt-8 pt-5 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <span class="text-xs font-bold text-brand-cyan">Potencial de conversão: até 3x maior</span>
+            <span class="text-xs font-bold text-brand-cyan">Potencial de conversão até 3x maior</span>
             <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Quero%20trocar%20meu%20link%20da%20bio%20por%20uma%20Landing%20Page%20com%20Agendamento%20Inteligente%20da%20Sites.Gu!"
+              href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Quero%20migrar%20minha%20bio%20para%20o%20Padr%C3%A3o%20Sites.Gu%20%2B%20Agendamento%20Inteligente!"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-xs transition-colors"
             >
-              <span>Quero atualizar minha bio</span>
+              <span>Profissionalizar Minha Bio</span>
               <span>→</span>
             </a>
           </div>
         </div>
 
       </div>
+
+      <!-- 3 Passos Simples de Entrega -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        <div class="bg-white rounded-2xl p-6 border border-brand-border shadow-xs flex items-start gap-4">
+          <span class="w-10 h-10 rounded-xl bg-brand-navy text-brand-cyan font-display font-extrabold text-sm flex items-center justify-center shrink-0">01</span>
+          <div>
+            <h4 class="font-display font-bold text-base text-brand-navy">Envio Rápido pelo WhatsApp</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Você manda sua tabela de serviços, fotos e endereço sem burocracia.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-brand-border shadow-xs flex items-start gap-4">
+          <span class="w-10 h-10 rounded-xl bg-brand-navy text-brand-cyan font-display font-extrabold text-sm flex items-center justify-center shrink-0">02</span>
+          <div>
+            <h4 class="font-display font-bold text-base text-brand-navy">Montagem &amp; Agendamento</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Criamos o layout com suas cores e configuramos o fluxo direto para seu número.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-brand-border shadow-xs flex items-start gap-4">
+          <span class="w-10 h-10 rounded-xl bg-brand-cyan text-brand-navy font-display font-extrabold text-sm flex items-center justify-center shrink-0">03</span>
+          <div>
+            <h4 class="font-display font-bold text-base text-brand-navy">No Ar em até 48h</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Você aprova no celular e já coloca o link oficial na bio do Instagram.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 4. PORTFÓLIO & 4 PRÉVIAS INTERATIVAS COM AGENDAMENTO REAL             -->
+  <!-- 4. PORTFÓLIO COM 4 PRÉVIAS INTERATIVAS AO VIVO                        -->
   <!-- ===================================================================== -->
-  <section id="portfolio" class="py-16 sm:py-24 bg-white border-y border-brand-border">
+  <section id="previas" class="py-16 sm:py-24 bg-white border-y border-brand-border scroll-mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16 reveal">
-        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Teste na Prática Agora Mesmo</span>
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Experimente na Prática</span>
         <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
-          Portfólio &amp; 4 Prévias com Agendamento Interativo
+          Portfólio &amp; 4 Prévias Interativas ao Vivo
         </h2>
         <p class="text-slate-600 text-sm sm:text-base">
-          Clique em <strong>"Testar Prévia Interativa"</strong> em qualquer projeto abaixo para navegar pelo mini-site, escolher serviços, selecionar data e horário e ver como o pedido chega estruturado no WhatsApp.
+          Toque em <strong>"Testar Prévia Interativa"</strong> em qualquer projeto abaixo para navegar no simulador, escolher serviços, selecionar data e horário e ver o resumo gerado para o WhatsApp.
         </p>
       </div>
 
-      <!-- PRÉVIA 1 (CASE REAL EM DESTAQUE): Cílios da Mi (@_ciliosdami) -->
+      <!-- CARD 1 (CASE REAL EM DESTAQUE): Cílios da Mi (@_ciliosdami) -->
       <div class="reveal bg-brand-bg rounded-3xl border-2 border-brand-navy/15 shadow-soft overflow-hidden mb-10">
         <div class="grid grid-cols-1 lg:grid-cols-12">
           
-          <!-- Left Visual Snapshot -->
+          <!-- Miniatura Visual Esquerda -->
           <div class="lg:col-span-5 bg-gradient-to-br from-[#FDF2F8] via-[#FCE7F3] to-[#F8FAFC] p-6 sm:p-8 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-brand-border">
             <div class="w-full max-w-sm bg-white rounded-3xl shadow-md border border-pink-100 overflow-hidden">
               <div class="px-4 py-2.5 bg-pink-50 border-b border-pink-100 flex items-center justify-between">
-                <span class="text-[11px] font-bold text-pink-900">@_ciliosdami • Case Real</span>
+                <span class="text-[11px] font-bold text-pink-900">@_ciliosdami • Guarulhos, SP</span>
                 <span class="text-[11px] font-extrabold text-amber-500">★★★★★ 5.0</span>
               </div>
               <div class="p-5">
@@ -608,16 +638,16 @@
                 </div>
                 <div class="space-y-2 mb-4 text-xs">
                   <div class="flex justify-between p-2.5 rounded-xl bg-pink-50/70 border border-pink-100">
-                    <span class="font-semibold text-slate-800">Volume Brasileiro</span>
-                    <span class="font-extrabold text-pink-700">R$ 130</span>
+                    <span class="font-semibold text-slate-800">Extensão de Cílios</span>
+                    <span class="font-extrabold text-pink-700">A partir de R$ 130</span>
                   </div>
                   <div class="flex justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                    <span class="font-semibold text-slate-800">Mega Volume</span>
-                    <span class="font-extrabold text-pink-700">R$ 160</span>
-                  </div>
-                  <div class="flex justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                    <span class="font-semibold text-slate-800">Design com Henna / Gel</span>
+                    <span class="font-semibold text-slate-800">Design de Sobrancelhas</span>
                     <span class="font-extrabold text-pink-700">A partir de R$ 55</span>
+                  </div>
+                  <div class="flex justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <span class="font-semibold text-slate-800">Alongamento em Gel</span>
+                    <span class="font-extrabold text-pink-700">R$ 110</span>
                   </div>
                 </div>
                 <button
@@ -625,22 +655,22 @@
                   onclick="openInteractivePreview('cilios')"
                   class="w-full py-3 rounded-xl bg-pink-600 hover:bg-pink-700 text-white font-display font-bold text-xs transition-colors cursor-pointer"
                 >
-                  Testar Agendamento em 3 Toques →
+                  Testar Agendamento em 3 Passos →
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- Right Details -->
+          <!-- Detalhes do Case Real -->
           <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-4">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cyan/15 text-brand-navy font-display font-extrabold text-xs">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cyan/15 text-brand-navy font-display font-extrabold text-xs uppercase tracking-wide">
                   <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
-                  Prévia 01 • Case Real em Operação
+                  CASE REAL • GUARULHOS, SP
                 </span>
-                <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-semibold text-slate-600">
-                  Guarulhos - SP
+                <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-bold text-amber-600">
+                  ★ 5.0 Google Avaliações
                 </span>
               </div>
 
@@ -649,13 +679,13 @@
               </h3>
 
               <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-                Página de conversão e catálogo inteligente criado para o estúdio <strong>Cílios da Mi</strong>, localizado na <em>Rua Zeferino Alves de Oliveira, 1051 - Jardim Ponte Alta, Guarulhos - SP</em>. Reúne catálogo interativo de cílios, sobrancelhas e unhas em gel, selo 5.0 estrelas no Google Avaliações, rota no Google Maps e agendamento rápido.
+                Landing Page de alta conversão desenvolvida para o estúdio localizado na <strong>Rua Zeferino Alves de Oliveira, 1051 - Jardim Ponte Alta, Guarulhos - SP</strong>. Inclui catálogo completo de extensão de cílios, design de sobrancelhas e unhas, nota 5.0 estrelas no Google Avaliações, rota direta no Google Maps e fluxo de agendamento interativo.
               </p>
 
               <div class="flex flex-wrap gap-2 mb-7">
-                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Agendamento em 3 Toques</span>
-                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Google Maps Integrado</span>
-                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Selo 5.0 Google Avaliações</span>
+                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Catálogo Cílios, Sobrancelhas &amp; Unhas</span>
+                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Botão de Rota Maps</span>
+                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Nota 5.0 Google</span>
               </div>
             </div>
 
@@ -672,7 +702,7 @@
               </button>
 
               <a
-                href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vi%20o%20case%20C%C3%ADlios%20da%20Mi%20na%20Sites.Gu%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio!"
+                href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vi%20o%20case%20real%20C%C3%ADlios%20da%20Mi%20na%20Sites.Gu%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio!"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[50px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm shadow-cyan transition-all hover:-translate-y-0.5"
@@ -685,30 +715,30 @@
         </div>
       </div>
 
-      <!-- PRÉVIAS 2, 3 e 4 (GRID DE 3 COLUNAS RESPONSIVO) -->
+      <!-- CARDS 2, 3 E 4 -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         
-        <!-- PRÉVIA 2: OdontoPrime Estética -->
+        <!-- CARD 2: OdontoPrime Estética -->
         <div class="reveal bg-brand-bg rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col justify-between">
           <div>
             <div class="bg-gradient-to-br from-[#0F213A] to-[#173054] p-6 text-white">
               <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan font-display font-bold text-[11px]">
-                  Prévia 02 • Odontologia
+                <span class="px-2.5 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan font-display font-extrabold text-[11px] uppercase tracking-wide">
+                  CLÍNICAS &amp; SAÚDE
                 </span>
-                <span class="text-xs font-bold text-sky-300">Triagem Inteligente</span>
+                <span class="text-xs font-bold text-sky-300">Triagem Rápida</span>
               </div>
               <h3 class="font-display font-extrabold text-xl text-white">OdontoPrime Estética</h3>
-              <p class="text-xs text-slate-300 mt-1">Clínica Odontológica &amp; Harmonização</p>
+              <p class="text-xs text-slate-300 mt-1">Odontologia Moderna &amp; Lentes</p>
             </div>
 
             <div class="p-6">
               <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                Triagem interativa por procedimento (Limpeza, Clareamento a Laser, Lentes em Porcelana, Ortodontia), escolha de especialista e seleção de horários disponíveis.
+                Triagem interativa por procedimento (Limpeza, Clareamento a Laser, Lentes em Porcelana), escolha de especialista e horários disponíveis.
               </p>
               <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-brand-navy">
-                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Escolha de Dentista</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Triagem Rápida</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Triagem de Procedimento</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Escolha de Especialista</span>
               </div>
             </div>
           </div>
@@ -722,33 +752,33 @@
               <span>Testar Prévia Interativa</span>
             </button>
             <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Testei%20a%20pr%C3%A9via%20OdontoPrime%20Est%C3%A9tica%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
+              href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Testei%20a%20pr%C3%A9via%20OdontoPrime%20Est%C3%A9tica%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
               target="_blank"
               rel="noopener noreferrer"
               class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-brand-border font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
             >
-              <span>Encomendar esse Modelo →</span>
+              <span>Pedir Esse Modelo →</span>
             </a>
           </div>
         </div>
 
-        <!-- PRÉVIA 3: BarberClub VIP -->
+        <!-- CARD 3: BarberClub VIP -->
         <div class="reveal bg-brand-bg rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col justify-between">
           <div>
             <div class="bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 text-white">
               <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-display font-bold text-[11px]">
-                  Prévia 03 • Barbearia
+                <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-display font-extrabold text-[11px] uppercase tracking-wide">
+                  BARBEARIAS &amp; SALÕES
                 </span>
-                <span class="text-xs font-bold text-amber-300">Clube &amp; Agenda</span>
+                <span class="text-xs font-bold text-amber-300">Reserva VIP</span>
               </div>
               <h3 class="font-display font-extrabold text-xl text-white">BarberClub VIP</h3>
-              <p class="text-xs text-zinc-300 mt-1">Barbearia &amp; Assinaturas Mensais</p>
+              <p class="text-xs text-zinc-300 mt-1">Cortes, Barboterapia &amp; Assinatura</p>
             </div>
 
             <div class="p-6">
               <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                Seleção do barbeiro preferido, serviços avulsos ou assinatura mensal VIP, escolha de horário no mesmo dia e confirmação instantânea para o WhatsApp.
+                Escolha do barbeiro preferido, serviços avulsos ou plano de assinatura VIP mensal e reserva rápida direto para o WhatsApp.
               </p>
               <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-brand-navy">
                 <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Escolha de Barbeiro</span>
@@ -766,33 +796,33 @@
               <span>Testar Prévia Interativa</span>
             </button>
             <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Testei%20a%20pr%C3%A9via%20BarberClub%20VIP%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
+              href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Testei%20a%20pr%C3%A9via%20BarberClub%20VIP%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
               target="_blank"
               rel="noopener noreferrer"
               class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-brand-border font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
             >
-              <span>Encomendar esse Modelo →</span>
+              <span>Pedir Esse Modelo →</span>
             </a>
           </div>
         </div>
 
-        <!-- PRÉVIA 4: Aura Estética Avançada -->
+        <!-- CARD 4: Aura Estética Avançada -->
         <div class="reveal bg-brand-bg rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col justify-between">
           <div>
             <div class="bg-gradient-to-br from-teal-900 to-emerald-950 p-6 text-white">
               <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-full bg-emerald-400/20 text-emerald-300 font-display font-bold text-[11px]">
-                  Prévia 04 • Clínica Estética
+                <span class="px-2.5 py-1 rounded-full bg-emerald-400/20 text-emerald-300 font-display font-extrabold text-[11px] uppercase tracking-wide">
+                  ESTÉTICA AVANÇADA
                 </span>
                 <span class="text-xs font-bold text-emerald-300">Funil + Voucher</span>
               </div>
               <h3 class="font-display font-extrabold text-xl text-white">Aura Estética Avançada</h3>
-              <p class="text-xs text-emerald-100/80 mt-1">Estética Facial &amp; Corporal</p>
+              <p class="text-xs text-emerald-100/80 mt-1">Protocolos Faciais &amp; Corporais</p>
             </div>
 
             <div class="p-6">
               <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                Funil interativo de objetivo estético, agendamento expresso de avaliação e gerador automático de voucher digital com código exclusivo para apresentar na clínica.
+                Funil interativo de objetivo estético, agendamento expresso e gerador automático de voucher digital de avaliação para apresentar na clínica.
               </p>
               <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-brand-navy">
                 <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Funil de Objetivo</span>
@@ -810,12 +840,12 @@
               <span>Testar Prévia Interativa</span>
             </button>
             <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Testei%20a%20pr%C3%A9via%20Aura%20Est%C3%A9tica%20Avan%C3%A7ada%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
+              href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Testei%20a%20pr%C3%A9via%20Aura%20Est%C3%A9tica%20Avan%C3%A7ada%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
               target="_blank"
               rel="noopener noreferrer"
               class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-brand-border font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
             >
-              <span>Encomendar esse Modelo →</span>
+              <span>Pedir Esse Modelo →</span>
             </a>
           </div>
         </div>
@@ -827,27 +857,27 @@
   <!-- ===================================================================== -->
   <!-- 5. SIMULADOR INTERATIVO DE FATURAMENTO (ROI)                          -->
   <!-- ===================================================================== -->
-  <section id="simulador" class="py-16 sm:py-24">
+  <section id="simulador" class="py-16 sm:py-24 scroll-mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl mx-auto text-center mb-12 reveal">
-        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Calculadora de Retorno</span>
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Simulador de Retorno</span>
         <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
-          Simule o impacto no seu faturamento mensal
+          Calcule quanto sua empresa pode faturar a mais
         </h2>
         <p class="text-slate-600 text-sm sm:text-base">
-          Deslize os controles abaixo com a realidade do seu negócio e veja quantos agendamentos e quanto faturamento extra uma página de alta conversão pode gerar.
+          Ajuste as visitas mensais do seu perfil e o ticket médio do seu serviço para visualizar na hora o impacto de uma página de alta conversão.
         </p>
       </div>
 
       <div class="reveal bg-white rounded-3xl p-5 sm:p-10 border border-brand-border shadow-soft">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <!-- Sliders Column -->
+          <!-- Controles Deslizantes -->
           <div class="lg:col-span-5 space-y-8 bg-brand-bg p-6 sm:p-7 rounded-2xl border border-brand-border">
             <div>
               <div class="flex items-center justify-between gap-2 mb-3">
                 <label for="visitsSlider" class="text-sm font-bold text-brand-navy">
-                  Visitas mensais no perfil/anúncios
+                  Visitas mensais no perfil
                 </label>
                 <span id="visitsValue" class="px-3 py-1 rounded-xl bg-brand-navy text-white font-display font-bold text-sm shrink-0">
                   1.500
@@ -867,34 +897,34 @@
                   Ticket médio do serviço (R$)
                 </label>
                 <span id="ticketValue" class="px-3 py-1 rounded-xl bg-brand-cyan/20 text-brand-navy font-display font-extrabold text-sm shrink-0">
-                  R$ 150
+                  R$ 130
                 </span>
               </div>
-              <input id="ticketSlider" type="range" min="50" max="600" step="10" value="150" class="sg-slider" />
+              <input id="ticketSlider" type="range" min="40" max="600" step="10" value="130" class="sg-slider" />
               <div class="flex justify-between text-[11px] text-slate-400 font-medium mt-2">
-                <span>R$ 50</span>
+                <span>R$ 40</span>
                 <span>R$ 300</span>
                 <span>R$ 600</span>
               </div>
             </div>
 
             <p class="text-xs text-slate-500 leading-relaxed pt-3 border-t border-brand-border">
-              *Comparativo entre taxa média de link comum na bio (~2%) e página otimizada com agendamento inteligente (~6,5%).
+              *Com apenas <strong>3 ou 4 novos clientes</strong>, o investimento único do plano Agendamento Smart (R$ 397) já se paga integralmente.
             </p>
           </div>
 
-          <!-- Results Column -->
+          <!-- Cards de Resultado -->
           <div class="lg:col-span-7 space-y-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="bg-brand-bg rounded-2xl p-5 sm:p-6 border border-brand-border">
                 <span class="inline-block px-2.5 py-1 rounded-lg bg-slate-200/80 text-slate-700 text-xs font-semibold mb-3">
-                  Sem Landing Page (~2%)
+                  Link Comum na Bio (~2%)
                 </span>
-                <p class="text-xs text-slate-500">Agendamentos / mês</p>
+                <p class="text-xs text-slate-500">Clientes agendados / mês</p>
                 <p id="basicClients" class="font-display font-extrabold text-2xl text-slate-700 mt-0.5">30 clientes</p>
                 <div class="mt-4 pt-3 border-t border-brand-border">
                   <p class="text-xs text-slate-500">Faturamento estimado</p>
-                  <p id="basicRevenue" class="font-display font-bold text-lg text-slate-600">R$ 4.500,00</p>
+                  <p id="basicRevenue" class="font-display font-bold text-lg text-slate-600">R$ 3.900,00</p>
                 </div>
               </div>
 
@@ -903,11 +933,11 @@
                 <span class="inline-block px-2.5 py-1 rounded-lg bg-brand-cyan text-brand-navy text-xs font-display font-extrabold mb-3">
                   Com Sites.Gu (~6,5%)
                 </span>
-                <p class="text-xs text-slate-300">Agendamentos / mês</p>
+                <p class="text-xs text-slate-300">Clientes agendados / mês</p>
                 <p id="proClients" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-0.5">98 clientes</p>
                 <div class="mt-4 pt-3 border-t border-white/15">
                   <p class="text-xs text-slate-300">Faturamento estimado</p>
-                  <p id="proRevenue" class="font-display font-extrabold text-xl text-brand-cyan">R$ 14.700,00</p>
+                  <p id="proRevenue" class="font-display font-extrabold text-xl text-brand-cyan">R$ 12.740,00</p>
                 </div>
               </div>
             </div>
@@ -916,12 +946,12 @@
               <div>
                 <p class="text-xs font-extrabold uppercase tracking-wider text-brand-cyan">Potencial de Ganho Extra</p>
                 <p class="font-display font-extrabold text-xl sm:text-2xl text-brand-navy mt-0.5">
-                  +<span id="extraClients">68</span> clientes e +<span id="extraRevenue">R$ 10.200,00</span>/mês
+                  +<span id="extraClients">68</span> clientes e +<span id="extraRevenue">R$ 8.840,00</span>/mês
                 </p>
               </div>
               <a
                 id="simulatorCta"
-                href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Fiz%20a%20simula%C3%A7%C3%A3o%20no%20site%20da%20Sites.Gu%20e%20quero%20esse%20crescimento%20no%20meu%20neg%C3%B3cio!"
+                href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Fiz%20a%20simula%C3%A7%C3%A3o%20no%20site%20da%20Sites.Gu%20e%20quero%20esse%20crescimento%20no%20meu%20neg%C3%B3cio!"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 min-h-[48px] rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm shadow-cyan transition-all hover:-translate-y-0.5 shrink-0"
@@ -938,239 +968,301 @@
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 6. COMO FUNCIONA (3 PASSOS) + PLANOS / SOLUÇÕES SOB MEDIDA            -->
+  <!-- 6. SEÇÃO DE PLANOS COM ANCORAGEM COMERCIAL (VALORES DE LANÇAMENTO)    -->
   <!-- ===================================================================== -->
-  <section id="processo" class="py-16 sm:py-24 bg-white border-t border-brand-border">
+  <section id="planos" class="py-16 sm:py-24 bg-white border-y border-brand-border scroll-mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- 3 Steps Process -->
       <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16 reveal">
-        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Rápido e Sem Burocracia</span>
-        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
-          Como funciona na prática
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-cyan/15 text-brand-navy font-display font-extrabold text-xs uppercase tracking-wider mb-3">
+          Valores Promocionais de Lançamento
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mb-4">
+          Escolha o plano ideal para o seu negócio
         </h2>
         <p class="text-slate-600 text-sm sm:text-base">
-          Em apenas 3 passos simples colocamos sua página profissional no ar pronta para receber agendamentos todos os dias.
+          Investimento único, entrega ágil e sem taxa mensal de hospedagem. Escolha o formato que melhor atende o momento da sua empresa.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20 sm:mb-28">
-        <div class="reveal bg-brand-bg rounded-3xl p-7 border border-brand-border">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-display font-extrabold text-3xl text-brand-cyan">01.</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-bold text-brand-navy">Etapa 1</span>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        
+        <!-- PLANO 1 (ENTRADA): Bio-Link Pro -->
+        <div class="reveal bg-brand-bg rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white border border-brand-border text-[11px] font-display font-extrabold uppercase tracking-wider text-brand-navy mb-4">
+              SAIA DO AMADORISMO
+            </span>
+            <h3 class="font-display font-extrabold text-2xl text-brand-navy mb-2">Bio-Link Pro</h3>
+            <div class="flex items-baseline gap-2 mb-5 pb-5 border-b border-brand-border">
+              <span class="font-display font-extrabold text-4xl text-brand-navy">R$ 197</span>
+              <span class="text-xs font-semibold text-slate-500">(pagamento único)</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-slate-700 mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Página única ultra rápida (carrega na hora no 4G)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Catálogo organizado com serviços e preços</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Botões diretos para o WhatsApp</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Rota no Google Maps e link de avaliações</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Design 100% adaptado para celular</span>
+              </li>
+            </ul>
           </div>
-          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Alinhamento pelo WhatsApp</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Você envia seus serviços, preços, endereço e fotos pelo WhatsApp. Tudo simples, direto e sem reuniões longas.
-          </p>
+
+          <a
+            href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Quero%20o%20plano%20*Bio-Link%20Pro%20(R%24%20197)*%20da%20Sites.Gu%20para%20o%20meu%20neg%C3%B3cio!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full py-4 px-5 min-h-[52px] rounded-2xl bg-white hover:bg-brand-navy text-brand-navy hover:text-white border-2 border-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 transition-all"
+          >
+            <span>Quero o Bio-Link Pro (R$ 197)</span>
+          </a>
         </div>
 
-        <div class="reveal bg-brand-bg rounded-3xl p-7 border border-brand-border">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-display font-extrabold text-3xl text-brand-cyan">02.</span>
-            <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-bold text-brand-navy">Etapa 2</span>
+        <!-- PLANO 2 (DESTAQUE CENTRAL): Agendamento Smart -->
+        <div class="reveal bg-brand-navy text-white rounded-3xl p-7 sm:p-8 border-2 border-brand-cyan shadow-navy flex flex-col justify-between relative lg:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-cyan text-brand-navy font-display font-extrabold text-xs uppercase tracking-wider shadow-sm whitespace-nowrap">
+            ★ O MAIS ESCOLHIDO
           </div>
-          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Criação &amp; Agendamento Inteligente</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Desenvolvemos o design personalizado com a identidade da sua marca e configuramos o fluxo de agendamento para seu WhatsApp.
-          </p>
+
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-brand-cyan text-[11px] font-display font-bold uppercase tracking-wider mb-4 mt-1">
+              Campeão de Conversão
+            </span>
+            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-2">
+              Agendamento Smart
+            </h3>
+            <div class="flex items-baseline gap-2 mb-5 pb-5 border-b border-white/15">
+              <span class="font-display font-extrabold text-4xl sm:text-5xl text-brand-cyan">R$ 397</span>
+              <span class="text-xs font-semibold text-slate-300">(pagamento único)</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-slate-200 mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span><strong>Tudo do plano Bio-Link Pro +</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Agendamento interativo (serviço, dia e horário)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Resumo automático pronto no WhatsApp</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Galeria de resultados (Antes/Depois)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Prova social (avaliações 5 estrelas) &amp; FAQ</span>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Quero%20o%20plano%20*Agendamento%20Smart%20(R%24%20397)*%20da%20Sites.Gu%20para%20o%20meu%20neg%C3%B3cio!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full py-4 px-5 min-h-[54px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 shadow-cyan transition-all hover:-translate-y-0.5"
+          >
+            <span>Quero o Agendamento Smart (R$ 397)</span>
+          </a>
         </div>
 
-        <div class="reveal bg-brand-navy text-white rounded-3xl p-7 shadow-navy">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-display font-extrabold text-3xl text-brand-cyan">03.</span>
-            <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-brand-cyan">Etapa 3</span>
+        <!-- PLANO 3 (EXPANSÃO): Captação & Ads Pro -->
+        <div class="reveal bg-brand-bg rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-white border border-brand-border text-[11px] font-display font-extrabold uppercase tracking-wider text-brand-navy mb-4">
+              ESCALAR VENDAS
+            </span>
+            <h3 class="font-display font-extrabold text-2xl text-brand-navy mb-2">Captação &amp; Ads Pro</h3>
+            <div class="mb-5 pb-5 border-b border-brand-border">
+              <div class="flex items-baseline gap-2">
+                <span class="font-display font-extrabold text-4xl text-brand-navy">R$ 697</span>
+                <span class="text-xs font-semibold text-slate-500">(pagamento único)</span>
+              </div>
+              <p class="text-xs font-semibold text-slate-500 mt-1">
+                ou R$ 597 + R$ 59/mês (opcional c/ atualizações)
+              </p>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-slate-700 mb-8">
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span><strong>Tudo do Agendamento Smart +</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Instalação de Pixel Meta &amp; Google Tag</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Estrutura otimizada para tráfego pago</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Domínio .com.br incluso e configurado</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span>Gerador de voucher ou seção de campanhas</span>
+              </li>
+            </ul>
           </div>
-          <h3 class="font-display font-bold text-xl text-white mb-2">No Ar na Sua Bio</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Você aprova a prévia no celular e já recebe o link publicado pronto para colocar na bio do Instagram e anúncios.
-          </p>
+
+          <a
+            href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Quero%20o%20plano%20*Capta%C3%A7%C3%A3o%20%26%20Ads%20Pro%20(R%24%20697)*%20da%20Sites.Gu%20para%20escalar%20minhas%20vendas!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full py-4 px-5 min-h-[52px] rounded-2xl bg-white hover:bg-brand-navy text-brand-navy hover:text-white border-2 border-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 transition-all"
+          >
+            <span>Quero o Captação &amp; Ads Pro (R$ 697)</span>
+          </a>
         </div>
+
       </div>
-
-      <!-- Planos / Soluções Sob Medida -->
-      <div id="planos" class="scroll-mt-24">
-        <div class="max-w-2xl mx-auto text-center mb-12 reveal">
-          <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Escolha o Formato Ideal</span>
-          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
-            Soluções Sob Medida para o Seu Negócio
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base">
-            Estruturas pensadas para cada momento da sua empresa, sem mensalidade de servidor e com entrega ágil.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          
-          <!-- Plano 1: Landing Page Express -->
-          <div class="reveal bg-brand-bg rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between">
-            <div>
-              <span class="inline-block px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-display font-bold text-brand-navy mb-4">
-                Entrada Rápida
-              </span>
-              <h3 class="font-display font-extrabold text-2xl text-brand-navy mb-2">Landing Page Express</h3>
-              <p class="text-sm text-slate-600 mb-6">
-                Ideal para profissionais autônomos e prestadores de serviço que precisam sair do link amador na bio com rapidez.
-              </p>
-
-              <ul class="space-y-3 text-sm text-slate-700 mb-8">
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Página única responsiva (Mobile-First)</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Apresentação de serviços e diferenciais</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Botões estratégicos diretos para WhatsApp</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Zero mensalidade de hospedagem básica</span>
-                </li>
-              </ul>
-            </div>
-
-            <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20*Landing%20Page%20Express*%20da%20Sites.Gu.%20Gostaria%20de%20saber%20valores%20e%20prazos!"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full py-4 px-5 min-h-[50px] rounded-2xl bg-white hover:bg-brand-navy text-brand-navy hover:text-white border-2 border-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 transition-all"
-            >
-              <span>Solicitar Landing Page Express</span>
-            </a>
-          </div>
-
-          <!-- Plano 2 (Destaque): Landing Page Pro + Agendamento Inteligente -->
-          <div class="reveal bg-brand-navy text-white rounded-3xl p-7 sm:p-8 border-2 border-brand-cyan shadow-navy flex flex-col justify-between relative">
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-cyan text-brand-navy font-display font-extrabold text-xs uppercase tracking-wider shadow-sm whitespace-nowrap">
-              Mais Escolhido
-            </div>
-
-            <div>
-              <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-brand-cyan text-xs font-display font-bold mb-4 mt-1">
-                Alta Conversão
-              </span>
-              <h3 class="font-display font-extrabold text-2xl text-white mb-2">
-                Landing Page Pro + Agendamento Inteligente
-              </h3>
-              <p class="text-sm text-slate-300 mb-6">
-                Perfeito para clínicas, estúdios de estética e barbearias que querem filtrar curiosos e receber pedidos prontos no WhatsApp.
-              </p>
-
-              <ul class="space-y-3 text-sm text-slate-200 mb-8">
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span><strong>Fluxo interativo de agendamento em 3 toques</strong></span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Catálogo de serviços com preços e duração</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Google Maps + Selo de Avaliações 5 Estrelas</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Resumo automático formatado para WhatsApp</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Otimizada para Instagram Bio e Tráfego Pago</span>
-                </li>
-              </ul>
-            </div>
-
-            <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20*Landing%20Page%20Pro%20%2B%20Agendamento%20Inteligente*%20da%20Sites.Gu.%20Quero%20um%20or%C3%A7amento!"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full py-4 px-5 min-h-[52px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 shadow-cyan transition-all hover:-translate-y-0.5"
-            >
-              <span>Quero o Plano Pro</span>
-              <span>→</span>
-            </a>
-          </div>
-
-          <!-- Plano 3: Catálogo & Bio Premium -->
-          <div class="reveal bg-brand-bg rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between">
-            <div>
-              <span class="inline-block px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-display font-bold text-brand-navy mb-4">
-                Completo &amp; Escalável
-              </span>
-              <h3 class="font-display font-extrabold text-2xl text-brand-navy mb-2">Catálogo &amp; Bio Premium</h3>
-              <p class="text-sm text-slate-600 mb-6">
-                Para negócios com múltiplos profissionais, combos, cursos ou campanhas sazonais que exigem máxima autoridade.
-              </p>
-
-              <ul class="space-y-3 text-sm text-slate-700 mb-8">
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Tudo do Plano Pro + múltiplas categorias</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Seleção de profissional ou unidade</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Seção dedicada a cursos, planos ou vouchers</span>
-                </li>
-                <li class="flex items-center gap-2.5">
-                  <span class="text-brand-cyan font-extrabold">✓</span>
-                  <span>Suporte prioritário na publicação</span>
-                </li>
-              </ul>
-            </div>
-
-            <a
-              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20*Cat%C3%A1logo%20%26%20Bio%20Premium*%20da%20Sites.Gu.%20Podemos%20conversar?"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full py-4 px-5 min-h-[50px] rounded-2xl bg-white hover:bg-brand-navy text-brand-navy hover:text-white border-2 border-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 transition-all"
-            >
-              <span>Solicitar Bio Premium</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 7. BANNER FINAL + RODAPÉ PROFISSIONAL + BOTÃO FLUTUANTE WHATSAPP      -->
+  <!-- 7. FAQ INTERATIVO (ACORDEÃO DE PERGUNTAS FREQUENTES)                  -->
   <!-- ===================================================================== -->
-  <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+  <section id="faq" class="py-16 sm:py-24 scroll-mt-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Tire suas Dúvidas</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
+          Perguntas Frequentes (FAQ)
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Tudo o que você precisa saber antes de colocar sua Landing Page profissional no ar.
+        </p>
+      </div>
+
+      <div class="space-y-3.5 reveal" id="faqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white rounded-2xl border border-brand-border shadow-xs overflow-hidden">
+          <button
+            type="button"
+            class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-brand-navy hover:bg-slate-50/70 transition-colors cursor-pointer"
+            aria-expanded="true"
+          >
+            <span>Preciso pagar mensalidade de hospedagem ou plataforma?</span>
+            <span class="faq-icon w-8 h-8 rounded-xl bg-brand-cyan/15 text-brand-navy flex items-center justify-center font-extrabold text-lg shrink-0 transition-transform duration-200 rotate-45">+</span>
+          </button>
+          <div class="faq-content px-5 sm:px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            <strong>Não!</strong> Nos planos <strong>Bio-Link Pro (R$ 197)</strong> e <strong>Agendamento Smart (R$ 397)</strong> você paga apenas uma única vez pelo desenvolvimento. Publicamos sua página em infraestrutura de alta velocidade com certificado de segurança (HTTPS) sem custo mensal de servidor.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white rounded-2xl border border-brand-border shadow-xs overflow-hidden">
+          <button
+            type="button"
+            class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-brand-navy hover:bg-slate-50/70 transition-colors cursor-pointer"
+            aria-expanded="false"
+          >
+            <span>Em quanto tempo minha Landing Page fica pronta no ar?</span>
+            <span class="faq-icon w-8 h-8 rounded-xl bg-brand-bg text-brand-navy flex items-center justify-center font-extrabold text-lg shrink-0 transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Após você enviar sua lista de serviços, preços, endereço e fotos pelo WhatsApp, entregamos a primeira versão em <strong>24h a 48h úteis</strong>. Assim que você aprovar os detalhes, o link já vai para o ar no mesmo dia.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white rounded-2xl border border-brand-border shadow-xs overflow-hidden">
+          <button
+            type="button"
+            class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-brand-navy hover:bg-slate-50/70 transition-colors cursor-pointer"
+            aria-expanded="false"
+          >
+            <span>Funciona bem quando o cliente clica direto no Instagram pelo 4G?</span>
+            <span class="faq-icon w-8 h-8 rounded-xl bg-brand-bg text-brand-navy flex items-center justify-center font-extrabold text-lg shrink-0 transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Sim! Mais de 90% dos acessos vindos da bio do Instagram acontecem pelo celular. Por isso desenvolvemos todas as páginas com arquitetura <strong>Mobile-First</strong> ultraleve, garantindo abertura instantânea mesmo em conexões 4G e dentro do navegador interno do Instagram.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white rounded-2xl border border-brand-border shadow-xs overflow-hidden">
+          <button
+            type="button"
+            class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-brand-navy hover:bg-slate-50/70 transition-colors cursor-pointer"
+            aria-expanded="false"
+          >
+            <span>Como funciona o Agendamento Inteligente no meu WhatsApp?</span>
+            <span class="faq-icon w-8 h-8 rounded-xl bg-brand-bg text-brand-navy flex items-center justify-center font-extrabold text-lg shrink-0 transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Em vez de mandar o cliente para uma conversa vazia, a página guia o visitante em 3 passos simples (serviço desejado, preferência de dia/horário e nome) e monta automaticamente uma mensagem organizada que abre direto no seu WhatsApp para você confirmar com um toque.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-white rounded-2xl border border-brand-border shadow-xs overflow-hidden">
+          <button
+            type="button"
+            class="faq-trigger w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-sm sm:text-base text-brand-navy hover:bg-slate-50/70 transition-colors cursor-pointer"
+            aria-expanded="false"
+          >
+            <span>E se eu precisar alterar preços, fotos ou promoções no futuro?</span>
+            <span class="faq-icon w-8 h-8 rounded-xl bg-brand-bg text-brand-navy flex items-center justify-center font-extrabold text-lg shrink-0 transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-5 sm:px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Você conta com 7 dias de ajustes gratuitos após a entrega para deixar tudo perfeito. Depois disso, você pode solicitar alterações pontuais avulsas sempre que precisar ou optar pelo plano mensal opcional de atualizações ilimitadas.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 8. BANNER FINAL + RODAPÉ MINIMALISTA + BOTÃO FLUTUANTE WHATSAPP       -->
+  <!-- ===================================================================== -->
+  <section class="pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="reveal relative bg-brand-navy rounded-3xl p-8 sm:p-14 overflow-hidden shadow-navy text-center">
         <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-cyan/20 blur-3xl pointer-events-none"></div>
         <div class="relative z-10 max-w-2xl mx-auto">
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white leading-tight mb-4">
-            Pronto para transformar cliques da bio em clientes reais?
+            Pronto para transformar visitas da bio em clientes agendados?
           </h2>
           <p class="text-slate-300 text-sm sm:text-base mb-8">
-            Chame agora no WhatsApp, envie o segmento da sua empresa e receba sua proposta personalizada.
+            Chame agora no WhatsApp, informe o ramo do seu negócio e garanta os valores promocionais de lançamento.
           </p>
           <a
-            href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20quero%20criar%20minha%20Landing%20Page%20profissional!"
+            href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20quero%20garantir%20minha%20Landing%20Page%20com%20valor%20de%20lan%C3%A7amento!"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-2.5 px-7 py-4 min-h-[54px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm sm:text-base shadow-cyan transition-all hover:-translate-y-0.5"
           >
-            <span>Falar no WhatsApp • (11) 93396-6500</span>
+            <span>Chamar no WhatsApp • (11) 93396-6500</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Rodapé Minimalista -->
   <footer class="bg-white border-t border-brand-border py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
       <!-- Logo SVG Sites.Gu -->
@@ -1189,14 +1281,15 @@
       </a>
 
       <div class="flex flex-wrap justify-center gap-5 text-xs sm:text-sm font-semibold text-slate-600">
-        <a href="#solucoes" class="hover:text-brand-navy">Soluções</a>
-        <a href="#portfolio" class="hover:text-brand-navy">4 Prévias</a>
-        <a href="#simulador" class="hover:text-brand-navy">Simulador</a>
+        <a href="#como-funciona" class="hover:text-brand-navy">Como Funciona</a>
+        <a href="#previas" class="hover:text-brand-navy">Prévias ao Vivo</a>
+        <a href="#simulador" class="hover:text-brand-navy">Simulador ROI</a>
         <a href="#planos" class="hover:text-brand-navy">Planos</a>
+        <a href="#faq" class="hover:text-brand-navy">FAQ</a>
       </div>
 
       <a
-        href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20rodap%C3%A9%20do%20site%20da%20Sites.Gu."
+        href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vim%20pelo%20rodap%C3%A9%20do%20site%20da%20Sites.Gu."
         target="_blank"
         rel="noopener noreferrer"
         class="text-xs sm:text-sm font-display font-bold text-brand-navy hover:text-brand-cyan transition-colors"
@@ -1206,16 +1299,16 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
+  <!-- Botão Flutuante WhatsApp (Canto Inferior Direito) -->
   <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2.5 group">
     <span class="hidden md:inline-block px-3.5 py-2 rounded-xl bg-brand-navy text-white font-display font-bold text-xs shadow-lg">
       Falar no WhatsApp
     </span>
     <a
-      href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20Landing%20Pages."
+      href="https://wa.me/5511933966500?text=Ol%C3%A1%20Gustavo!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20planos."
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar no WhatsApp"
+      aria-label="Falar no WhatsApp (11) 93396-6500"
       class="relative w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center shadow-xl transition-transform duration-200 hover:scale-105 active:scale-95"
     >
       <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25 pointer-events-none"></span>
@@ -1231,7 +1324,7 @@
   <div id="previewModal" class="fixed inset-0 z-50 hidden items-center justify-center sm:p-5 bg-brand-navy/80 backdrop-blur-sm">
     <div class="bg-white w-full h-[100dvh] sm:h-auto sm:max-h-[92vh] sm:max-w-4xl sm:rounded-3xl shadow-2xl border-0 sm:border border-brand-border overflow-hidden flex flex-col">
       
-      <!-- Modal Top Header -->
+      <!-- Cabeçalho do Modal -->
       <div class="px-4 sm:px-6 py-3 bg-slate-50 border-b border-brand-border flex items-center justify-between gap-2 shrink-0">
         <div class="flex items-center gap-2 min-w-0">
           <span id="modalBadge" class="px-2.5 py-1 rounded-lg bg-brand-cyan/20 text-brand-navy font-display font-extrabold text-[11px] shrink-0">
@@ -1243,7 +1336,7 @@
         </div>
 
         <div class="flex items-center gap-2 shrink-0">
-          <!-- Desktop/Mobile Viewport Switcher (visible on sm+) -->
+          <!-- Alternador Celular / Desktop (visível em telas sm+) -->
           <div class="hidden sm:flex items-center bg-white p-1 rounded-xl border border-brand-border text-xs font-bold">
             <button type="button" id="vpMobileBtn" onclick="setPreviewViewport('mobile')" class="px-3 py-1 rounded-lg bg-brand-navy text-white transition-colors cursor-pointer">
               Celular (390px)
@@ -1266,17 +1359,17 @@
         </div>
       </div>
 
-      <!-- Interactive Mini-Site Body -->
+      <!-- Área Interativa da Prévia -->
       <div class="flex-1 overflow-y-auto preview-scroll bg-brand-bg p-0 sm:p-6 flex justify-center">
         <div id="modalViewportContainer" class="w-full sm:w-[390px] max-w-full bg-white sm:rounded-3xl sm:border border-brand-border sm:shadow-xl overflow-hidden transition-all duration-300 h-fit">
           <div id="interactivePreviewMount"></div>
         </div>
       </div>
 
-      <!-- Modal Bottom Sales Bar -->
+      <!-- Barra Inferior de Conversão no Modal -->
       <div class="px-4 sm:px-6 py-3 bg-white border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-2.5 shrink-0">
         <p class="text-xs text-slate-600 font-medium text-center sm:text-left">
-          Gostou dessa experiência? Criamos essa estrutura personalizada para o seu negócio.
+          Gostou dessa experiência? Criamos essa estrutura sob medida para o seu negócio.
         </p>
         <a
           id="modalOrderCta"
@@ -1293,11 +1386,11 @@
   </div>
 
   <!-- ===================================================================== -->
-  <!-- JAVASCRIPT: MOBILE DRAWER, HERO DEMO, ROI SIMULATOR & 4 PREVIEWS      -->
+  <!-- JAVASCRIPT PURO: GAVETA MOBILE, HERO DEMO, SIMULADOR, PRÉVIAS & FAQ   -->
   <!-- ===================================================================== -->
   <script>
     // -----------------------------------------------------------------------
-    // 1. Mobile Slide-Over Drawer Logic
+    // 1. Controle da Gaveta Mobile (Slide-Over Drawer)
     // -----------------------------------------------------------------------
     const mobileDrawerOpenBtn = document.getElementById('mobileDrawerOpenBtn');
     const mobileDrawerCloseBtn = document.getElementById('mobileDrawerCloseBtn');
@@ -1332,14 +1425,20 @@
     });
 
     // -----------------------------------------------------------------------
-    // 2. Hero Live Smartphone Interactive Demo
+    // 2. Simulação Interativa de Smartphone na Hero Section
     // -----------------------------------------------------------------------
     let heroSelectedService = 'Volume Brasileiro — R$ 130';
     let heroSelectedTime = '14:00';
     const heroPhoneSummary = document.getElementById('heroPhoneSummary');
+    const heroPhoneWhatsAppBtn = document.getElementById('heroPhoneWhatsAppBtn');
 
     function updateHeroPhoneSummary() {
-      heroPhoneSummary.textContent = `${heroSelectedService} • Hoje às ${heroSelectedTime}`;
+      const summaryText = `${heroSelectedService} • Hoje às ${heroSelectedTime}`;
+      heroPhoneSummary.textContent = summaryText;
+      const msg = encodeURIComponent(
+        `Olá Gustavo! Testei a simulação do celular no site da Sites.Gu (${summaryText}) e quero um site assim para o meu negócio!`
+      );
+      heroPhoneWhatsAppBtn.href = `https://wa.me/5511933966500?text=${msg}`;
     }
 
     document.querySelectorAll('.hero-phone-srv').forEach(btn => {
@@ -1408,7 +1507,7 @@
       extraRevenueEl.textContent = formatBRL(extraClients * ticket);
 
       const text = encodeURIComponent(
-        `Olá! Fiz a simulação no site da Sites.Gu (${visits} visitas/mês e ticket médio de R$ ${ticket}) e quero gerar +${extraClients} clientes extras por mês com uma Landing Page!`
+        `Olá Gustavo! Fiz a simulação no site da Sites.Gu (${visits} visitas/mês e ticket médio de R$ ${ticket}) e quero gerar +${extraClients} clientes extras por mês com uma Landing Page!`
       );
       simulatorCta.href = `https://wa.me/5511933966500?text=${text}`;
     }
@@ -1418,7 +1517,7 @@
     updateRoiSimulator();
 
     // -----------------------------------------------------------------------
-    // 4. Engine Interativa Real das 4 Prévias no Modal
+    // 4. Motor Interativo das 4 Prévias ao Vivo (Agendamento em 3 Passos)
     // -----------------------------------------------------------------------
     const previewModal = document.getElementById('previewModal');
     const modalBadge = document.getElementById('modalBadge');
@@ -1431,131 +1530,126 @@
 
     const previewCatalogs = {
       cilios: {
-        badge: 'Case Real • Guarulhos - SP',
+        badge: 'CASE REAL • GUARULHOS, SP',
         title: 'Cílios da Mi (@_ciliosdami)',
         businessName: 'Cílios da Mi (@_ciliosdami)',
-        subtitle: 'Especialista em Extensão de Cílios, Sobrancelhas & Unhas em Gel',
+        subtitle: 'Extensão de Cílios, Design de Sobrancelhas & Unhas em Gel',
         address: 'Rua Zeferino Alves de Oliveira, 1051 - Jardim Ponte Alta, Guarulhos - SP',
         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rua+Zeferino+Alves+de+Oliveira+1051+Jardim+Ponte+Alta+Guarulhos+SP',
-        ratingText: '5.0 ★ no Google Avaliações (148 avaliações)',
+        ratingText: '5.0 ★ Google Avaliações',
         theme: {
           headerBg: 'bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900',
-          accentBg: 'bg-pink-600',
           accentText: 'text-pink-700',
           accentSoft: 'bg-pink-50 border-pink-200',
           pillBg: 'bg-pink-100 text-pink-900'
         },
+        optionsTitle: '1. Escolha seu Procedimento',
         step2Label: '2. Escolha o Dia e Horário',
-        optionsTitle: '1. Selecione seu Procedimento',
         services: [
-          { id: 'vb', name: 'Volume Brasileiro', desc: 'Fios tecnológicos com retenção alta (1h30)', price: 'R$ 130,00' },
-          { id: 'mv', name: 'Mega Volume', desc: 'Olhar marcante e super preenchido (2h00)', price: 'R$ 160,00' },
-          { id: 'dh', name: 'Design com Henna', desc: 'Alinhamento estratégico + henna (45min)', price: 'R$ 55,00' },
-          { id: 'ag', name: 'Alongamento em Gel', desc: 'Unhas naturais e resistentes (1h40)', price: 'R$ 110,00' }
+          { name: 'Extensão de Cílios — Volume Brasileiro', desc: 'Fios tecnológicos com retenção alta (1h30)', price: 'R$ 130,00' },
+          { name: 'Extensão de Cílios — Mega Volume', desc: 'Olhar marcante e super preenchido (2h00)', price: 'R$ 160,00' },
+          { name: 'Design de Sobrancelhas + Henna', desc: 'Alinhamento estratégico + henna (45min)', price: 'R$ 55,00' },
+          { name: 'Unhas — Alongamento em Gel', desc: 'Naturalidade e resistência (1h40)', price: 'R$ 110,00' }
         ],
         specialistsLabel: 'Profissional',
         specialists: ['Milena (Especialista Master)'],
         dates: ['Hoje', 'Amanhã', 'Sábado'],
         times: ['09:30', '13:30', '16:00', '18:30'],
         voucherMode: false,
-        orderMsg: 'Olá! Testei a prévia interativa do case Cílios da Mi na Sites.Gu e quero uma página nesse padrão!'
+        orderMsg: 'Olá Gustavo! Testei a prévia interativa do case Cílios da Mi na Sites.Gu e quero um site nesse padrão!'
       },
 
       odonto: {
-        badge: 'Prévia 02 • Odontologia',
+        badge: 'CLÍNICAS & SAÚDE',
         title: 'OdontoPrime Estética',
         businessName: 'OdontoPrime Estética',
-        subtitle: 'Odontologia Moderna, Lentes em Porcelana & Harmonização',
+        subtitle: 'Odontologia Estética, Clareamento & Lentes em Porcelana',
         address: 'Av. Paulista, 1450 - Bela Vista, São Paulo - SP',
         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Av+Paulista+1450+Sao+Paulo',
-        ratingText: '4.9 ★ no Google Avaliações (+240 pacientes)',
+        ratingText: '4.9 ★ Google Avaliações',
         theme: {
           headerBg: 'bg-gradient-to-br from-[#0F213A] via-[#162F52] to-[#0B192C]',
-          accentBg: 'bg-[#00B4F0]',
           accentText: 'text-[#0096C7]',
           accentSoft: 'bg-sky-50 border-sky-200',
           pillBg: 'bg-sky-100 text-[#0F213A]'
         },
+        optionsTitle: '1. Triagem de Procedimento',
         step2Label: '3. Selecione Data e Horário',
-        optionsTitle: '1. Qual procedimento você procura?',
         services: [
-          { id: 'lp', name: 'Limpeza & Profilaxia', desc: 'Remoção de tártaro + jato de bicarbonato', price: 'R$ 180,00' },
-          { id: 'cl', name: 'Clareamento a Laser', desc: 'Sessão clínica com dessensibilizante', price: 'R$ 490,00' },
-          { id: 'le', name: 'Lentes em Porcelana', desc: 'Avaliação + planejamento digital 3D', price: 'Avaliação VIP' },
-          { id: 'ao', name: 'Avaliação Ortodôntica', desc: 'Alinhadores invisíveis e aparelho estético', price: 'Consulta Inicial' }
+          { name: 'Limpeza & Profilaxia Completa', desc: 'Remoção de tártaro + jato de bicarbonato', price: 'R$ 180,00' },
+          { name: 'Clareamento Dental a Laser', desc: 'Sessão clínica com dessensibilizante', price: 'R$ 490,00' },
+          { name: 'Lentes em Porcelana', desc: 'Planejamento digital 3D do sorriso', price: 'Avaliação VIP' },
+          { name: 'Ortodontia / Alinhadores', desc: 'Avaliação estética e funcional', price: 'Consulta Inicial' }
         ],
         specialistsLabel: '2. Escolha o Especialista',
         specialists: ['Dra. Camila Alves (Estética)', 'Dr. Rafael Mendes (Implantes)'],
         dates: ['Hoje', 'Amanhã', 'Quinta'],
         times: ['10:00', '14:30', '17:00', '19:00'],
         voucherMode: false,
-        orderMsg: 'Olá! Testei a prévia interativa OdontoPrime Estética na Sites.Gu e quero criar uma página assim para minha clínica!'
+        orderMsg: 'Olá Gustavo! Testei a prévia OdontoPrime Estética na Sites.Gu e quero uma página assim para minha clínica!'
       },
 
       barber: {
-        badge: 'Prévia 03 • Barbearia',
+        badge: 'BARBEARIAS & SALÕES',
         title: 'BarberClub VIP',
         businessName: 'BarberClub VIP',
-        subtitle: 'Cortes de Precisão, Barboterapia & Assinaturas Mensais',
+        subtitle: 'Cortes de Precisão, Barboterapia & Assinatura Mensal',
         address: 'Rua Augusta, 2190 - Jardins, São Paulo - SP',
         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rua+Augusta+2190+Sao+Paulo',
-        ratingText: '5.0 ★ no Google Avaliações (310 avaliações)',
+        ratingText: '5.0 ★ Google Avaliações',
         theme: {
           headerBg: 'bg-gradient-to-br from-zinc-950 via-zinc-900 to-stone-900',
-          accentBg: 'bg-amber-500',
           accentText: 'text-amber-600',
           accentSoft: 'bg-amber-50 border-amber-200',
           pillBg: 'bg-amber-100 text-zinc-900'
         },
-        step2Label: '3. Horário no Mesmo Dia',
-        optionsTitle: '1. Escolha o Serviço ou Plano VIP',
+        optionsTitle: '1. Serviço Avulso ou Assinatura VIP',
+        step2Label: '3. Horário Disponível',
         services: [
-          { id: 'cd', name: 'Corte Degradê / Social', desc: 'Lavagem + finalização com pomada (40min)', price: 'R$ 50,00' },
-          { id: 'cb', name: 'Combo Corte + Barba', desc: 'Toalha quente + ozonioterapia (1h)', price: 'R$ 80,00' },
-          { id: 'vip', name: 'Assinatura Clube VIP Mensal', desc: 'Cortes ilimitados de seg. a sáb.', price: 'R$ 129,90/mês' },
-          { id: 'bt', name: 'Barboterapia Premium', desc: 'Alinhamento na navalha + hidratação', price: 'R$ 45,00' }
+          { name: 'Corte Degradê / Social', desc: 'Lavagem + finalização com pomada (40min)', price: 'R$ 50,00' },
+          { name: 'Combo Corte + Barba', desc: 'Toalha quente + ozonioterapia (1h)', price: 'R$ 80,00' },
+          { name: 'Assinatura Clube VIP Mensal', desc: 'Cortes ilimitados de seg. a sáb.', price: 'R$ 129,90/mês' },
+          { name: 'Barboterapia na Navalha', desc: 'Alinhamento + hidratação facial', price: 'R$ 45,00' }
         ],
-        specialistsLabel: '2. Selecione seu Barbeiro',
+        specialistsLabel: '2. Escolha seu Barbeiro',
         specialists: ['Lucas Silva', 'Matheus Rocha', 'Diego Costa'],
         dates: ['Hoje', 'Amanhã', 'Sábado'],
         times: ['11:00', '15:00', '17:30', '19:30'],
         voucherMode: false,
-        orderMsg: 'Olá! Testei a prévia interativa BarberClub VIP na Sites.Gu e quero criar uma página assim para minha barbearia!'
+        orderMsg: 'Olá Gustavo! Testei a prévia BarberClub VIP na Sites.Gu e quero uma página assim para minha barbearia!'
       },
 
       aura: {
-        badge: 'Prévia 04 • Clínica Estética',
+        badge: 'ESTÉTICA AVANÇADA',
         title: 'Aura Estética Avançada',
         businessName: 'Aura Estética Avançada',
-        subtitle: 'Protocolos Faciais & Corporais + Voucher de Avaliação Gratuita',
+        subtitle: 'Protocolos Faciais & Corporais + Voucher Digital de Avaliação',
         address: 'Alameda Santos, 980 - Cerqueira César, São Paulo - SP',
         mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Alameda+Santos+980+Sao+Paulo',
-        ratingText: '4.9 ★ no Google Avaliações (195 avaliações)',
+        ratingText: '4.9 ★ Google Avaliações',
         theme: {
           headerBg: 'bg-gradient-to-br from-teal-950 via-emerald-900 to-teal-900',
-          accentBg: 'bg-emerald-500',
           accentText: 'text-emerald-700',
           accentSoft: 'bg-emerald-50 border-emerald-200',
           pillBg: 'bg-emerald-100 text-teal-950'
         },
-        step2Label: '3. Dia e Horário Expresso',
         optionsTitle: '1. Qual é o seu Objetivo Estético?',
+        step2Label: '3. Dia e Horário Expresso',
         services: [
-          { id: 'rf', name: 'Rejuvenescimento Facial', desc: 'Bioestimuladores + protocolo revitalizante', price: 'Avaliação Grátis' },
-          { id: 'gl', name: 'Redução de Gordura Localizada', desc: 'Criolipólise e enzimas de alta performance', price: 'Avaliação Grátis' },
-          { id: 'lp', name: 'Limpeza de Pele Profunda', desc: 'Extração ultrassônica + peeling de diamante', price: 'R$ 140,00' },
-          { id: 'hc', name: 'Drenagem & Modeladora VIP', desc: 'Protocolo detox corporal imediato', price: 'R$ 120,00' }
+          { name: 'Rejuvenescimento Facial', desc: 'Bioestimuladores + protocolo revitalizante', price: 'Avaliação Grátis' },
+          { name: 'Redução de Gordura Localizada', desc: 'Criolipólise e enzimas de alta performance', price: 'Avaliação Grátis' },
+          { name: 'Limpeza de Pele Profunda', desc: 'Extração ultrassônica + peeling de diamante', price: 'R$ 140,00' },
+          { name: 'Drenagem & Modeladora VIP', desc: 'Protocolo detox corporal imediato', price: 'R$ 120,00' }
         ],
-        specialistsLabel: '2. Unidade / Especialista',
+        specialistsLabel: '2. Especialista',
         specialists: ['Dra. Beatriz Nunes (Biomédica Esteta)'],
         dates: ['Hoje', 'Amanhã', 'Sexta'],
         times: ['10:30', '14:00', '16:30', '18:00'],
         voucherMode: true,
-        orderMsg: 'Olá! Testei a prévia interativa Aura Estética Avançada (com funil e voucher) na Sites.Gu e quero um site assim!'
+        orderMsg: 'Olá Gustavo! Testei a prévia Aura Estética Avançada (com funil e voucher) na Sites.Gu e quero um site assim!'
       }
     };
 
-    // Active interactive preview state
     let currentPreviewKey = 'cilios';
     let bookingState = {
       serviceIdx: 0,
@@ -1648,22 +1742,21 @@
       const selectedDate = cfg.dates[bookingState.dateIdx];
       const selectedTime = cfg.times[bookingState.timeIdx];
 
-      // Build structured WhatsApp confirmation text
       const voucherLine = cfg.voucherMode ? `\n🎟️ *Voucher Gerado:* ${bookingState.voucherCode}` : '';
       const structuredWhatsAppMessage =
-        `Olá! Vim pelo site da *Sites.Gu* testando a prévia de *${cfg.businessName}*:\n\n` +
+        `Olá Gustavo! Vim pelo site da *Sites.Gu* testando a prévia de *${cfg.businessName}*:\n\n` +
         `👤 *Cliente:* ${bookingState.clientName || 'Visitante'}\n` +
         `✨ *Serviço:* ${selectedService.name} (${selectedService.price})\n` +
         `🩺 *Profissional:* ${selectedSpecialist}\n` +
         `📅 *Data/Horário:* ${selectedDate} às ${selectedTime}` +
         voucherLine +
-        `\n\nQuero criar uma página com agendamento assim para o meu negócio!`;
+        `\n\nQuero criar uma Landing Page com agendamento assim para o meu negócio!`;
 
       const waConfirmUrl = `https://wa.me/5511933966500?text=${encodeURIComponent(structuredWhatsAppMessage)}`;
 
       interactivePreviewMount.innerHTML = `
         <div class="bg-white text-slate-800 font-sans">
-          <!-- Mini-Site Brand Header -->
+          <!-- Cabeçalho do Mini-Site -->
           <div class="${cfg.theme.headerBg} text-white p-5 sm:p-6">
             <div class="flex items-center justify-between gap-2 mb-3">
               <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-[11px] font-bold">
@@ -1673,7 +1766,7 @@
             <h4 class="font-display font-extrabold text-xl sm:text-2xl leading-tight">${cfg.businessName}</h4>
             <p class="text-xs sm:text-sm text-white/85 mt-1">${cfg.subtitle}</p>
 
-            <!-- Address & Google Maps Link -->
+            <!-- Endereço & Botão Google Maps -->
             <div class="mt-4 pt-3 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-white/90">
               <span class="leading-snug">📍 ${cfg.address}</span>
               <a
@@ -1682,15 +1775,15 @@
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 hover:bg-white/25 text-white font-bold shrink-0 w-fit"
               >
-                <span>Ver no Maps ↗</span>
+                <span>Rota Maps ↗</span>
               </a>
             </div>
           </div>
 
-          <!-- Interactive 3-Step Booking Engine -->
+          <!-- Fluxo Interativo em 3 Passos -->
           <div class="p-4 sm:p-6 space-y-5">
             
-            <!-- Step 1: Service Selection -->
+            <!-- Passo 1: Serviço -->
             <div>
               <p class="font-display font-extrabold text-sm text-brand-navy mb-2.5">${cfg.optionsTitle}</p>
               <div class="space-y-2">
@@ -1717,7 +1810,7 @@
               </div>
             </div>
 
-            <!-- Specialist Selection (if multiple) -->
+            <!-- Seleção de Profissional (quando houver mais de um) -->
             ${cfg.specialists.length > 1 ? `
               <div>
                 <p class="font-display font-extrabold text-sm text-brand-navy mb-2">${cfg.specialistsLabel}</p>
@@ -1740,11 +1833,10 @@
               </div>
             ` : ''}
 
-            <!-- Date & Time Picker -->
+            <!-- Passo 2: Data e Horário -->
             <div>
               <p class="font-display font-extrabold text-sm text-brand-navy mb-2.5">${cfg.step2Label}</p>
               
-              <!-- Dates -->
               <div class="grid grid-cols-3 gap-2 mb-2.5">
                 ${cfg.dates.map((dt, idx) => {
                   const active = idx === bookingState.dateIdx;
@@ -1762,7 +1854,6 @@
                 }).join('')}
               </div>
 
-              <!-- Times -->
               <div class="grid grid-cols-4 gap-2">
                 ${cfg.times.map((tm, idx) => {
                   const active = idx === bookingState.timeIdx;
@@ -1781,10 +1872,10 @@
               </div>
             </div>
 
-            <!-- Client Name & Confirm Button -->
+            <!-- Passo 3: Nome e Geração do Resumo -->
             <div class="pt-2 border-t border-slate-100">
               <label for="previewClientNameInput" class="block font-display font-extrabold text-sm text-brand-navy mb-1.5">
-                Seu Nome para Reserva
+                3. Seu Nome para Reserva
               </label>
               <div class="flex flex-col sm:flex-row gap-2">
                 <input
@@ -1799,30 +1890,30 @@
                   onclick="confirmPreviewBooking()"
                   class="px-5 py-3 min-h-[46px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-xs sm:text-sm transition-colors cursor-pointer shrink-0"
                 >
-                  Confirmar Horário
+                  Gerar Resumo
                 </button>
               </div>
               <p id="previewNameError" class="hidden text-xs font-semibold text-rose-600 mt-1.5">
-                Digite seu nome acima para gerar o resumo do agendamento.
+                Digite seu nome acima para gerar o resumo pronto do WhatsApp.
               </p>
             </div>
 
-            <!-- Structured Confirmation Summary Card -->
+            <!-- Cartão de Resumo Pronto para o WhatsApp -->
             ${bookingState.confirmed ? `
               <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-500/40 space-y-3">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white font-display font-bold text-[11px]">
-                    ✓ Pré-Agendamento Gerado
+                    ✓ Resumo Pronto para WhatsApp
                   </span>
                   ${cfg.voucherMode ? `<span class="font-mono font-extrabold text-xs text-emerald-900 bg-white px-2.5 py-1 rounded-lg border border-emerald-200">${bookingState.voucherCode}</span>` : ''}
                 </div>
 
                 <div class="text-xs text-slate-700 space-y-1 bg-white p-3.5 rounded-xl border border-emerald-200/80">
                   <p><strong>Cliente:</strong> ${bookingState.clientName}</p>
-                  <p><strong>Procedimento:</strong> ${selectedService.name} (${selectedService.price})</p>
+                  <p><strong>Serviço:</strong> ${selectedService.name} (${selectedService.price})</p>
                   <p><strong>Profissional:</strong> ${selectedSpecialist}</p>
                   <p><strong>Data e Hora:</strong> ${selectedDate} às ${selectedTime}</p>
-                  ${cfg.voucherMode ? `<p class="text-emerald-700 font-bold pt-1">🎁 Voucher Digital de Avaliação Gratuita Ativado!</p>` : ''}
+                  ${cfg.voucherMode ? `<p class="text-emerald-700 font-bold pt-1">🎁 Voucher Digital de Avaliação Ativado!</p>` : ''}
                 </div>
 
                 <a
@@ -1831,7 +1922,7 @@
                   rel="noopener noreferrer"
                   class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white font-display font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-all"
                 >
-                  <span>Enviar Resumo no WhatsApp Agora →</span>
+                  <span>Enviar Pedido no WhatsApp →</span>
                 </a>
               </div>
             ` : ''}
@@ -1841,7 +1932,6 @@
       `;
     }
 
-    // Backdrop & Escape Key Close
     previewModal.addEventListener('click', (e) => {
       if (e.target === previewModal) closeInteractivePreview();
     });
@@ -1853,7 +1943,42 @@
     });
 
     // -----------------------------------------------------------------------
-    // 5. Scroll Reveal Animation Observer
+    // 5. FAQ Interativo (Acordeão)
+    // -----------------------------------------------------------------------
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+        // Fecha outros itens abertos para manter o visual limpo
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) {
+            other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-content').classList.add('hidden');
+            const otherIcon = other.querySelector('.faq-icon');
+            otherIcon.classList.remove('rotate-45', 'bg-brand-cyan/15');
+            otherIcon.classList.add('bg-brand-bg');
+          }
+        });
+
+        if (isOpen) {
+          trigger.setAttribute('aria-expanded', 'false');
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-45', 'bg-brand-cyan/15');
+          icon.classList.add('bg-brand-bg');
+        } else {
+          trigger.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-45', 'bg-brand-cyan/15');
+          icon.classList.remove('bg-brand-bg');
+        }
+      });
+    });
+
+    // -----------------------------------------------------------------------
+    // 6. Scroll Reveal Animation
     // -----------------------------------------------------------------------
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
