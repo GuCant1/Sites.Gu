@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Sites.Gu | Landing Pages de Alta Conversão e Agendamento Inteligente</title>
+  <meta name="description" content="Transforme visitantes do seu Instagram em clientes agendados todos os dias. Landing Pages ultrarrápidas com agendamento inteligente para negócios locais." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F5F6F8',
+              white: '#FFFFFF',
+              navy: '#0F213A',
+              navyLight: '#173054',
+              cyan: '#00B4F0',
+              cyanHover: '#0096C7',
+              border: '#E2E8F0',
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(15, 33, 58, 0.08)',
+            'cyan': '0 12px 28px -8px rgba(0, 180, 240, 0.45)',
+            'navy': '0 20px 45px -15px rgba(15, 33, 58, 0.25)',
+            'phone': '0 25px 50px -12px rgba(15, 33, 58, 0.28)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base Styles & Typography */
+    html, body {
+      background-color: #F5F6F8;
+      color: #0F213A;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Subtle Architectural Grid Background for Hero */
+    .hero-grid {
+      background-image:
+        radial-gradient(circle at 82% 18%, rgba(0, 180, 240, 0.11) 0%, transparent 45%),
+        radial-gradient(circle at 12% 82%, rgba(15, 33, 58, 0.05) 0%, transparent 40%),
+        linear-gradient(to right, rgba(15, 33, 58, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 33, 58, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 34px 34px, 34px 34px;
+    }
+
+    /* Custom Range Sliders (Touch-Friendly 28px Thumb) */
+    input[type="range"].sg-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: #E2E8F0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"].sg-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #00B4F0;
+      border: 4px solid #FFFFFF;
+      box-shadow: 0 4px 12px rgba(15, 33, 58, 0.28);
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    input[type="range"].sg-slider::-webkit-slider-thumb:hover,
+    input[type="range"].sg-slider::-webkit-slider-thumb:active {
+      transform: scale(1.12);
+      background: #0096C7;
+    }
+
+    input[type="range"].sg-slider::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #00B4F0;
+      border: 4px solid #FFFFFF;
+      box-shadow: 0 4px 12px rgba(15, 33, 58, 0.28);
+      cursor: pointer;
+    }
+
+    /* Smooth Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating Animations */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .animate-float-slow {
+      animation: floatSlow 4.5s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: floatSlow 5.2s ease-in-out 1.4s infinite;
+    }
+
+    /* Clean Scrollbars inside Modal */
+    .preview-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .preview-scroll::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    .preview-scroll::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-cyan/20 selection:text-brand-navy">
+
+  <!-- ===================================================================== -->
+  <!-- 1. NAVBAR FIXA LIMPA + MENU GAVETA MOBILE-FIRST                       -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-brand-border/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo SVG Oficial Sites.Gu -->
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none" aria-label="Sites.Gu Início">
+          <svg class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 110 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Monograma Duplo 'S' (#0F213A) -->
+            <path d="M47 18H29C20.7157 18 14 24.7157 14 33C14 41.2843 20.7157 48 29 48H38C42.4183 48 46 51.5817 46 56C46 60.4183 42.4183 64 38 64H16" stroke="#0F213A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M47 26H29C25.134 26 22 29.134 22 33C22 36.866 25.134 40 29 40H38C46.8366 40 54 47.1634 54 56C54 64.8366 46.8366 72 38 72H16" stroke="#0F213A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Monograma Duplo 'G' Entrelaçado com Seta Ascendente (#00B4F0) -->
+            <path d="M84 22C79.5 18.8 74 17 68 17C53.6406 17 42 28.6406 42 43C42 57.3594 53.6406 69 68 69C80.5 69 90.8 60.2 93.3 48.5H71" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M79 29C75.8 26.5 72 25 68 25C58.0589 25 50 33.0589 50 43C50 52.9411 58.0589 61 68 61C76.2 61 83.1 55.5 85.3 48" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Ponta da Seta Ascendente -->
+            <path d="M84 14L95 22L86 31" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M77 28L93 22" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round"/>
+          </svg>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight leading-none text-brand-navy">
+              SITES<span class="text-brand-cyan">.GU</span>
+            </span>
+            <span class="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500 mt-0.5">
+              Smart Landing Pages
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+          <a href="#solucoes" class="hover:text-brand-navy transition-colors py-2">Soluções</a>
+          <a href="#portfolio" class="hover:text-brand-navy transition-colors py-2">Portfólio &amp; Prévias</a>
+          <a href="#simulador" class="hover:text-brand-navy transition-colors py-2">Simulador</a>
+          <a href="#processo" class="hover:text-brand-navy transition-colors py-2">Processo</a>
+          <a href="#planos" class="hover:text-brand-navy transition-colors py-2">Planos</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <a
+            href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2.5 min-h-[42px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-xs sm:text-sm shadow-sm transition-all duration-200 hover:-translate-y-0.5"
+          >
+            <span>Solicitar Orçamento</span>
+            <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+
+          <!-- Mobile Drawer Trigger Button -->
+          <button
+            id="mobileDrawerOpenBtn"
+            type="button"
+            class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-brand-border bg-white text-brand-navy hover:bg-brand-bg focus:outline-none active:scale-95 transition-transform"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Over Drawer (Gaveta Fluida para Celular) -->
+  <div id="mobileDrawerBackdrop" class="fixed inset-0 z-50 bg-brand-navy/60 backdrop-blur-xs hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+  <aside
+    id="mobileDrawer"
+    class="fixed top-0 right-0 bottom-0 z-50 w-[84%] max-w-xs bg-white shadow-2xl border-l border-brand-border transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between lg:hidden"
+    aria-label="Menu Mobile"
+  >
+    <div>
+      <!-- Drawer Header -->
+      <div class="px-5 h-16 border-b border-brand-border flex items-center justify-between">
+        <span class="font-display font-extrabold text-lg text-brand-navy">
+          SITES<span class="text-brand-cyan">.GU</span>
+        </span>
+        <button
+          id="mobileDrawerCloseBtn"
+          type="button"
+          class="w-10 h-10 rounded-xl bg-brand-bg text-brand-navy flex items-center justify-center hover:bg-slate-200 transition-colors"
+          aria-label="Fechar menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Large Touch-Friendly Links -->
+      <nav class="p-4 space-y-1.5">
+        <a href="#solucoes" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Soluções</span>
+          <span class="text-brand-cyan text-sm">→</span>
+        </a>
+        <a href="#portfolio" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Portfólio &amp; 4 Prévias</span>
+          <span class="px-2 py-0.5 rounded-md bg-brand-cyan/15 text-brand-navy text-xs font-extrabold">Ao Vivo</span>
+        </a>
+        <a href="#simulador" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Simulador de Faturamento</span>
+          <span class="text-brand-cyan text-sm">→</span>
+        </a>
+        <a href="#processo" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Como Funciona</span>
+          <span class="text-brand-cyan text-sm">→</span>
+        </a>
+        <a href="#planos" class="drawer-link flex items-center justify-between px-4 py-3.5 rounded-2xl font-display font-bold text-base text-brand-navy hover:bg-brand-bg active:bg-brand-cyan/10 transition-colors">
+          <span>Planos Sob Medida</span>
+          <span class="text-brand-cyan text-sm">→</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Drawer Bottom CTA -->
+    <div class="p-5 border-t border-brand-border bg-brand-bg">
+      <a
+        href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20menu%20mobile%20do%20site%20da%20Sites.Gu%20e%20quero%20um%20or%C3%A7amento."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full flex items-center justify-center gap-2.5 py-4 px-5 rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm shadow-cyan transition-all"
+      >
+        <span>Falar no WhatsApp</span>
+      </a>
+      <p class="text-center text-xs text-slate-500 mt-2.5 font-medium">(11) 93396-6500</p>
+    </div>
+  </aside>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HERO SECTION DE ALTA CONVERSÃO + SMARTPHONE INTERATIVO AO VIVO     -->
+  <!-- ===================================================================== -->
+  <section class="hero-grid relative pt-8 pb-14 sm:pt-14 sm:pb-22 lg:pt-18 lg:pb-24 border-b border-brand-border/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Conversion Copy -->
+        <div class="lg:col-span-6 text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-border shadow-xs mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"></span>
+            <span class="text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider text-brand-navy">
+              Páginas Mobile-First + Agendamento Inteligente
+            </span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-[30px] sm:text-4xl lg:text-[46px] text-brand-navy leading-[1.14] tracking-tight mb-5">
+            Transforme visitantes do seu Instagram em <span class="text-brand-cyan">clientes agendados todos os dias.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-xl">
+            Uma Landing Page ultrarrápida com fluxo de agendamento inteligente apresenta seus serviços, filtra curiosos no direct e envia o cliente pronto direto para o seu WhatsApp.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Quero%20uma%20Landing%20Page%20com%20agendamento%20inteligente%20para%20o%20meu%20neg%C3%B3cio."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2.5 px-6 py-4 min-h-[54px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm sm:text-base shadow-cyan transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.99]"
+            >
+              <span>Quero um Site Assim</span>
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+
+            <a
+              href="#portfolio"
+              class="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[54px] rounded-2xl bg-white hover:bg-slate-50 text-brand-navy border-2 border-brand-navy/15 hover:border-brand-navy font-display font-bold text-sm sm:text-base transition-all duration-200"
+            >
+              <span>Testar 4 Prévias Interativas</span>
+            </a>
+          </div>
+
+          <!-- Key Trust Badges -->
+          <div class="mt-7 pt-6 border-t border-brand-border/80 grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm text-slate-600 font-medium">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+              </svg>
+              <span>100% Adaptado ao Celular</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+              </svg>
+              <span>Zero Mensalidade de Servidor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Smartphone Mockup (Live Mini-Booking Demo) -->
+        <div class="lg:col-span-6 flex justify-center relative">
+          <!-- Floating Callout Top-Left -->
+          <div class="animate-float-slow hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white border border-brand-border shadow-soft absolute top-6 -left-2 xl:left-4 z-20">
+            <div class="w-9 h-9 rounded-xl bg-brand-cyan/15 text-brand-cyan flex items-center justify-center font-display font-extrabold text-xs">
+              3x
+            </div>
+            <div>
+              <p class="font-display font-bold text-xs text-brand-navy">Mais Agendamentos</p>
+              <p class="text-[11px] text-slate-500">Sem perder tempo no Direct</p>
+            </div>
+          </div>
+
+          <!-- Floating Callout Bottom-Right -->
+          <div class="animate-float-delayed hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-brand-navy text-white shadow-navy absolute bottom-8 -right-2 xl:right-4 z-20">
+            <div class="w-9 h-9 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-display font-bold text-xs text-white">Pronto para a Bio</p>
+              <p class="text-[11px] text-slate-300">Carregamento instantâneo</p>
+            </div>
+          </div>
+
+          <!-- Smartphone Chassis -->
+          <div class="w-full max-w-[360px] bg-brand-navy rounded-[40px] p-3 shadow-phone border-4 border-slate-800 relative z-10">
+            <!-- Dynamic Island / Speaker Notch -->
+            <div class="w-24 h-5 bg-slate-950 rounded-full mx-auto mb-2.5 flex items-center justify-end px-2.5">
+              <span class="w-2 h-2 rounded-full bg-brand-cyan/60"></span>
+            </div>
+
+            <!-- Phone Screen -->
+            <div class="bg-white rounded-[30px] overflow-hidden border border-slate-200">
+              <!-- Mini Browser Address Bar -->
+              <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-200/80 flex items-center justify-between text-[11px] text-slate-500">
+                <span class="font-semibold text-brand-navy flex items-center gap-1">
+                  <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                  </svg>
+                  agendar.seunegocio.com.br
+                </span>
+                <span class="px-2 py-0.5 rounded-full bg-brand-cyan/15 text-brand-navy font-bold text-[10px]">Ao Vivo</span>
+              </div>
+
+              <!-- Interactive Live Booking Widget Inside Hero Phone -->
+              <div class="p-4 sm:p-5 space-y-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-wider text-brand-cyan">Agendamento Inteligente</p>
+                    <h2 class="font-display font-extrabold text-base text-brand-navy">Escolha seu procedimento</h2>
+                  </div>
+                  <span class="text-xs font-bold text-amber-500">★ 5.0</span>
+                </div>
+
+                <!-- Step 1: Select Service -->
+                <div class="space-y-2" id="heroPhoneServices">
+                  <button
+                    type="button"
+                    data-service="Volume Brasileiro — R$ 130"
+                    class="hero-phone-srv w-full p-2.5 rounded-xl border-2 border-brand-cyan bg-brand-cyan/10 text-left flex items-center justify-between transition-all cursor-pointer"
+                  >
+                    <div>
+                      <p class="font-display font-bold text-xs text-brand-navy">Volume Brasileiro</p>
+                      <p class="text-[10px] text-slate-500">Duração: 1h30 • Manutenção 20 dias</p>
+                    </div>
+                    <span class="font-display font-extrabold text-xs text-brand-navy">R$ 130</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    data-service="Design + Henna — R$ 55"
+                    class="hero-phone-srv w-full p-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-cyan/60 text-left flex items-center justify-between transition-all cursor-pointer"
+                  >
+                    <div>
+                      <p class="font-display font-bold text-xs text-brand-navy">Design + Henna</p>
+                      <p class="text-[10px] text-slate-500">Duração: 40min • Visagismo facial</p>
+                    </div>
+                    <span class="font-display font-extrabold text-xs text-slate-700">R$ 55</span>
+                  </button>
+                </div>
+
+                <!-- Step 2: Select Time Slot -->
+                <div>
+                  <p class="text-[11px] font-bold text-brand-navy mb-2">Horários disponíveis hoje:</p>
+                  <div class="grid grid-cols-3 gap-1.5" id="heroPhoneTimes">
+                    <button type="button" data-time="14:00" class="hero-phone-time py-2 rounded-lg bg-brand-navy text-white font-display font-bold text-xs cursor-pointer">14:00</button>
+                    <button type="button" data-time="16:30" class="hero-phone-time py-2 rounded-lg bg-brand-bg text-brand-navy hover:bg-slate-200 font-display font-bold text-xs cursor-pointer">16:30</button>
+                    <button type="button" data-time="18:00" class="hero-phone-time py-2 rounded-lg bg-brand-bg text-brand-navy hover:bg-slate-200 font-display font-bold text-xs cursor-pointer">18:00</button>
+                  </div>
+                </div>
+
+                <!-- Live Summary & Action -->
+                <div class="p-3 rounded-2xl bg-brand-bg border border-brand-border">
+                  <p class="text-[10px] text-slate-500 font-medium">Resumo pronto para o WhatsApp:</p>
+                  <p id="heroPhoneSummary" class="text-xs font-bold text-brand-navy mt-0.5">
+                    Volume Brasileiro — R$ 130 • Hoje às 14:00
+                  </p>
+                </div>
+
+                <a
+                  href="#portfolio"
+                  class="w-full py-3 px-4 rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-cyan transition-all"
+                >
+                  <span>Testar Prévias Completas</span>
+                  <span>↓</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. DOR VS. SOLUÇÃO (COMPARATIVO VISUAL CLARO)                         -->
+  <!-- ===================================================================== -->
+  <section id="solucoes" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Pare de perder vendas no Direct</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
+          Por que um link comum na bio faz você perder dinheiro
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Quando o cliente clica na sua bio e encontra uma lista fria de botões ou cai direto em um chat sem informações, a maioria desiste antes mesmo de perguntar o preço.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+        
+        <!-- Left Card: Linktree / Direct Manual (Pain) -->
+        <div class="reveal bg-white rounded-3xl p-6 sm:p-9 border border-rose-200/80 shadow-soft flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 text-rose-700 font-display font-bold text-xs mb-5">
+              <span>✕ Modelo Antigo</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-slate-800 mb-3">
+              Linktree Comum / Direct Manual
+            </h3>
+            <p class="text-sm text-slate-500 mb-6">
+              Você perde horas respondendo as mesmas perguntas básicas e vê clientes esfriarem enquanto esperam resposta.
+            </p>
+
+            <ul class="space-y-4 text-sm text-slate-600">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
+                <span><strong>Curiosos sem filtro:</strong> Pessoas chamam apenas para perguntar "qual o valor?" e somem.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
+                <span><strong>Visual genérico:</strong> Lista de links sem fotos, sem provas sociais e sem valorizar seu trabalho.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
+                <span><strong>Atendimento lento:</strong> Vai-e-volta de mensagens para combinar serviço, data e horário.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
+                <span><strong>Baixo retorno em anúncios:</strong> Pagar tráfego para mandar visitante para uma página amadora queima verba.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-rose-600">
+            <span>Taxa média de conversão: ~1,5% a 2%</span>
+            <span>Alto desgaste operacional</span>
+          </div>
+        </div>
+
+        <!-- Right Card: Landing Page Sites.Gu com Agendamento Inteligente (Solution) -->
+        <div class="reveal bg-brand-navy text-white rounded-3xl p-6 sm:p-9 border-2 border-brand-cyan shadow-navy flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-brand-cyan/15 blur-2xl pointer-events-none"></div>
+          
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-cyan text-brand-navy font-display font-extrabold text-xs mb-5">
+              <span>✓ Padrão Sites.Gu</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white mb-3">
+              Landing Page Sites.Gu + Agendamento Inteligente
+            </h3>
+            <p class="text-sm text-slate-300 mb-6">
+              Uma máquina de conversão 24h no link da sua bio: apresenta sua autoridade, organiza sua agenda e entrega o cliente pronto no WhatsApp.
+            </p>
+
+            <ul class="space-y-4 text-sm text-slate-200">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span><strong>Agendamento em 3 toques:</strong> O cliente escolhe procedimento, dia e horário antes mesmo de abrir o WhatsApp.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span><strong>Autoridade e confiança imediata:</strong> Avaliações 5 estrelas, localização no Google Maps e portfólio visual.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span><strong>Mensagem estruturada no WhatsApp:</strong> Você recebe nome, serviço escolhido, valor e horário pronto para confirmar.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-brand-cyan text-brand-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">✓</span>
+                <span><strong>Ultrarrápida no 4G/5G:</strong> Construída Mobile-First para abrir instantaneamente dentro do navegador do Instagram.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative z-10 mt-8 pt-5 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <span class="text-xs font-bold text-brand-cyan">Potencial de conversão: até 3x maior</span>
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Quero%20trocar%20meu%20link%20da%20bio%20por%20uma%20Landing%20Page%20com%20Agendamento%20Inteligente%20da%20Sites.Gu!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-xs transition-colors"
+            >
+              <span>Quero atualizar minha bio</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. PORTFÓLIO & 4 PRÉVIAS INTERATIVAS COM AGENDAMENTO REAL             -->
+  <!-- ===================================================================== -->
+  <section id="portfolio" class="py-16 sm:py-24 bg-white border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Teste na Prática Agora Mesmo</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
+          Portfólio &amp; 4 Prévias com Agendamento Interativo
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Clique em <strong>"Testar Prévia Interativa"</strong> em qualquer projeto abaixo para navegar pelo mini-site, escolher serviços, selecionar data e horário e ver como o pedido chega estruturado no WhatsApp.
+        </p>
+      </div>
+
+      <!-- PRÉVIA 1 (CASE REAL EM DESTAQUE): Cílios da Mi (@_ciliosdami) -->
+      <div class="reveal bg-brand-bg rounded-3xl border-2 border-brand-navy/15 shadow-soft overflow-hidden mb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Left Visual Snapshot -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-[#FDF2F8] via-[#FCE7F3] to-[#F8FAFC] p-6 sm:p-8 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-brand-border">
+            <div class="w-full max-w-sm bg-white rounded-3xl shadow-md border border-pink-100 overflow-hidden">
+              <div class="px-4 py-2.5 bg-pink-50 border-b border-pink-100 flex items-center justify-between">
+                <span class="text-[11px] font-bold text-pink-900">@_ciliosdami • Case Real</span>
+                <span class="text-[11px] font-extrabold text-amber-500">★★★★★ 5.0</span>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-11 h-11 rounded-2xl bg-pink-600 text-white font-display font-extrabold flex items-center justify-center text-sm shadow-xs">
+                    CM
+                  </div>
+                  <div>
+                    <h4 class="font-display font-extrabold text-base text-slate-900">Cílios da Mi</h4>
+                    <p class="text-[11px] text-slate-500">Jardim Ponte Alta • Guarulhos - SP</p>
+                  </div>
+                </div>
+                <div class="space-y-2 mb-4 text-xs">
+                  <div class="flex justify-between p-2.5 rounded-xl bg-pink-50/70 border border-pink-100">
+                    <span class="font-semibold text-slate-800">Volume Brasileiro</span>
+                    <span class="font-extrabold text-pink-700">R$ 130</span>
+                  </div>
+                  <div class="flex justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <span class="font-semibold text-slate-800">Mega Volume</span>
+                    <span class="font-extrabold text-pink-700">R$ 160</span>
+                  </div>
+                  <div class="flex justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <span class="font-semibold text-slate-800">Design com Henna / Gel</span>
+                    <span class="font-extrabold text-pink-700">A partir de R$ 55</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onclick="openInteractivePreview('cilios')"
+                  class="w-full py-3 rounded-xl bg-pink-600 hover:bg-pink-700 text-white font-display font-bold text-xs transition-colors cursor-pointer"
+                >
+                  Testar Agendamento em 3 Toques →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Details -->
+          <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cyan/15 text-brand-navy font-display font-extrabold text-xs">
+                  <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                  Prévia 01 • Case Real em Operação
+                </span>
+                <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-semibold text-slate-600">
+                  Guarulhos - SP
+                </span>
+              </div>
+
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-brand-navy mb-3">
+                Cílios da Mi (@_ciliosdami)
+              </h3>
+
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                Página de conversão e catálogo inteligente criado para o estúdio <strong>Cílios da Mi</strong>, localizado na <em>Rua Zeferino Alves de Oliveira, 1051 - Jardim Ponte Alta, Guarulhos - SP</em>. Reúne catálogo interativo de cílios, sobrancelhas e unhas em gel, selo 5.0 estrelas no Google Avaliações, rota no Google Maps e agendamento rápido.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-7">
+                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Agendamento em 3 Toques</span>
+                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Google Maps Integrado</span>
+                <span class="px-3 py-1.5 rounded-xl bg-white border border-brand-border text-xs font-semibold text-brand-navy">Selo 5.0 Google Avaliações</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                onclick="openInteractivePreview('cilios')"
+                class="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[50px] rounded-2xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-sm transition-all cursor-pointer"
+              >
+                <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                </svg>
+                <span>Testar Prévia Interativa</span>
+              </button>
+
+              <a
+                href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vi%20o%20case%20C%C3%ADlios%20da%20Mi%20na%20Sites.Gu%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio!"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[50px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm shadow-cyan transition-all hover:-translate-y-0.5"
+              >
+                <span>Quero um Site Assim</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRÉVIAS 2, 3 e 4 (GRID DE 3 COLUNAS RESPONSIVO) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- PRÉVIA 2: OdontoPrime Estética -->
+        <div class="reveal bg-brand-bg rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="bg-gradient-to-br from-[#0F213A] to-[#173054] p-6 text-white">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan font-display font-bold text-[11px]">
+                  Prévia 02 • Odontologia
+                </span>
+                <span class="text-xs font-bold text-sky-300">Triagem Inteligente</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-white">OdontoPrime Estética</h3>
+              <p class="text-xs text-slate-300 mt-1">Clínica Odontológica &amp; Harmonização</p>
+            </div>
+
+            <div class="p-6">
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                Triagem interativa por procedimento (Limpeza, Clareamento a Laser, Lentes em Porcelana, Ortodontia), escolha de especialista e seleção de horários disponíveis.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-brand-navy">
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Escolha de Dentista</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Triagem Rápida</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 space-y-2.5">
+            <button
+              type="button"
+              onclick="openInteractivePreview('odonto')"
+              class="w-full py-3.5 px-4 min-h-[48px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer"
+            >
+              <span>Testar Prévia Interativa</span>
+            </button>
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Testei%20a%20pr%C3%A9via%20OdontoPrime%20Est%C3%A9tica%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-brand-border font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <span>Encomendar esse Modelo →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PRÉVIA 3: BarberClub VIP -->
+        <div class="reveal bg-brand-bg rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 text-white">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-display font-bold text-[11px]">
+                  Prévia 03 • Barbearia
+                </span>
+                <span class="text-xs font-bold text-amber-300">Clube &amp; Agenda</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-white">BarberClub VIP</h3>
+              <p class="text-xs text-zinc-300 mt-1">Barbearia &amp; Assinaturas Mensais</p>
+            </div>
+
+            <div class="p-6">
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                Seleção do barbeiro preferido, serviços avulsos ou assinatura mensal VIP, escolha de horário no mesmo dia e confirmação instantânea para o WhatsApp.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-brand-navy">
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Escolha de Barbeiro</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Assinatura VIP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 space-y-2.5">
+            <button
+              type="button"
+              onclick="openInteractivePreview('barber')"
+              class="w-full py-3.5 px-4 min-h-[48px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer"
+            >
+              <span>Testar Prévia Interativa</span>
+            </button>
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Testei%20a%20pr%C3%A9via%20BarberClub%20VIP%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-brand-border font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <span>Encomendar esse Modelo →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PRÉVIA 4: Aura Estética Avançada -->
+        <div class="reveal bg-brand-bg rounded-3xl border border-brand-border shadow-soft overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="bg-gradient-to-br from-teal-900 to-emerald-950 p-6 text-white">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full bg-emerald-400/20 text-emerald-300 font-display font-bold text-[11px]">
+                  Prévia 04 • Clínica Estética
+                </span>
+                <span class="text-xs font-bold text-emerald-300">Funil + Voucher</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-white">Aura Estética Avançada</h3>
+              <p class="text-xs text-emerald-100/80 mt-1">Estética Facial &amp; Corporal</p>
+            </div>
+
+            <div class="p-6">
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                Funil interativo de objetivo estético, agendamento expresso de avaliação e gerador automático de voucher digital com código exclusivo para apresentar na clínica.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-brand-navy">
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Funil de Objetivo</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white border border-brand-border">Voucher Digital</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 space-y-2.5">
+            <button
+              type="button"
+              onclick="openInteractivePreview('aura')"
+              class="w-full py-3.5 px-4 min-h-[48px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer"
+            >
+              <span>Testar Prévia Interativa</span>
+            </button>
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Testei%20a%20pr%C3%A9via%20Aura%20Est%C3%A9tica%20Avan%C3%A7ada%20na%20Sites.Gu%20e%20quero%20um%20site%20assim!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-brand-border font-display font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <span>Encomendar esse Modelo →</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. SIMULADOR INTERATIVO DE FATURAMENTO (ROI)                          -->
+  <!-- ===================================================================== -->
+  <section id="simulador" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center mb-12 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Calculadora de Retorno</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
+          Simule o impacto no seu faturamento mensal
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Deslize os controles abaixo com a realidade do seu negócio e veja quantos agendamentos e quanto faturamento extra uma página de alta conversão pode gerar.
+        </p>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl p-5 sm:p-10 border border-brand-border shadow-soft">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Sliders Column -->
+          <div class="lg:col-span-5 space-y-8 bg-brand-bg p-6 sm:p-7 rounded-2xl border border-brand-border">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <label for="visitsSlider" class="text-sm font-bold text-brand-navy">
+                  Visitas mensais no perfil/anúncios
+                </label>
+                <span id="visitsValue" class="px-3 py-1 rounded-xl bg-brand-navy text-white font-display font-bold text-sm shrink-0">
+                  1.500
+                </span>
+              </div>
+              <input id="visitsSlider" type="range" min="300" max="6000" step="100" value="1500" class="sg-slider" />
+              <div class="flex justify-between text-[11px] text-slate-400 font-medium mt-2">
+                <span>300</span>
+                <span>3.000</span>
+                <span>6.000 visitas</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <label for="ticketSlider" class="text-sm font-bold text-brand-navy">
+                  Ticket médio do serviço (R$)
+                </label>
+                <span id="ticketValue" class="px-3 py-1 rounded-xl bg-brand-cyan/20 text-brand-navy font-display font-extrabold text-sm shrink-0">
+                  R$ 150
+                </span>
+              </div>
+              <input id="ticketSlider" type="range" min="50" max="600" step="10" value="150" class="sg-slider" />
+              <div class="flex justify-between text-[11px] text-slate-400 font-medium mt-2">
+                <span>R$ 50</span>
+                <span>R$ 300</span>
+                <span>R$ 600</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-500 leading-relaxed pt-3 border-t border-brand-border">
+              *Comparativo entre taxa média de link comum na bio (~2%) e página otimizada com agendamento inteligente (~6,5%).
+            </p>
+          </div>
+
+          <!-- Results Column -->
+          <div class="lg:col-span-7 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-brand-bg rounded-2xl p-5 sm:p-6 border border-brand-border">
+                <span class="inline-block px-2.5 py-1 rounded-lg bg-slate-200/80 text-slate-700 text-xs font-semibold mb-3">
+                  Sem Landing Page (~2%)
+                </span>
+                <p class="text-xs text-slate-500">Agendamentos / mês</p>
+                <p id="basicClients" class="font-display font-extrabold text-2xl text-slate-700 mt-0.5">30 clientes</p>
+                <div class="mt-4 pt-3 border-t border-brand-border">
+                  <p class="text-xs text-slate-500">Faturamento estimado</p>
+                  <p id="basicRevenue" class="font-display font-bold text-lg text-slate-600">R$ 4.500,00</p>
+                </div>
+              </div>
+
+              <div class="bg-brand-navy text-white rounded-2xl p-5 sm:p-6 border-2 border-brand-cyan shadow-navy relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-brand-cyan/15 rounded-bl-full pointer-events-none"></div>
+                <span class="inline-block px-2.5 py-1 rounded-lg bg-brand-cyan text-brand-navy text-xs font-display font-extrabold mb-3">
+                  Com Sites.Gu (~6,5%)
+                </span>
+                <p class="text-xs text-slate-300">Agendamentos / mês</p>
+                <p id="proClients" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-0.5">98 clientes</p>
+                <div class="mt-4 pt-3 border-t border-white/15">
+                  <p class="text-xs text-slate-300">Faturamento estimado</p>
+                  <p id="proRevenue" class="font-display font-extrabold text-xl text-brand-cyan">R$ 14.700,00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-brand-bg rounded-2xl p-5 sm:p-6 border border-brand-cyan/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-wider text-brand-cyan">Potencial de Ganho Extra</p>
+                <p class="font-display font-extrabold text-xl sm:text-2xl text-brand-navy mt-0.5">
+                  +<span id="extraClients">68</span> clientes e +<span id="extraRevenue">R$ 10.200,00</span>/mês
+                </p>
+              </div>
+              <a
+                id="simulatorCta"
+                href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Fiz%20a%20simula%C3%A7%C3%A3o%20no%20site%20da%20Sites.Gu%20e%20quero%20esse%20crescimento%20no%20meu%20neg%C3%B3cio!"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 min-h-[48px] rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm shadow-cyan transition-all hover:-translate-y-0.5 shrink-0"
+              >
+                <span>Quero Esse Resultado</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. COMO FUNCIONA (3 PASSOS) + PLANOS / SOLUÇÕES SOB MEDIDA            -->
+  <!-- ===================================================================== -->
+  <section id="processo" class="py-16 sm:py-24 bg-white border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- 3 Steps Process -->
+      <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16 reveal">
+        <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Rápido e Sem Burocracia</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
+          Como funciona na prática
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Em apenas 3 passos simples colocamos sua página profissional no ar pronta para receber agendamentos todos os dias.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20 sm:mb-28">
+        <div class="reveal bg-brand-bg rounded-3xl p-7 border border-brand-border">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display font-extrabold text-3xl text-brand-cyan">01.</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-bold text-brand-navy">Etapa 1</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Alinhamento pelo WhatsApp</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Você envia seus serviços, preços, endereço e fotos pelo WhatsApp. Tudo simples, direto e sem reuniões longas.
+          </p>
+        </div>
+
+        <div class="reveal bg-brand-bg rounded-3xl p-7 border border-brand-border">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display font-extrabold text-3xl text-brand-cyan">02.</span>
+            <span class="px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-bold text-brand-navy">Etapa 2</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Criação &amp; Agendamento Inteligente</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Desenvolvemos o design personalizado com a identidade da sua marca e configuramos o fluxo de agendamento para seu WhatsApp.
+          </p>
+        </div>
+
+        <div class="reveal bg-brand-navy text-white rounded-3xl p-7 shadow-navy">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display font-extrabold text-3xl text-brand-cyan">03.</span>
+            <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-brand-cyan">Etapa 3</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2">No Ar na Sua Bio</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Você aprova a prévia no celular e já recebe o link publicado pronto para colocar na bio do Instagram e anúncios.
+          </p>
+        </div>
+      </div>
+
+      <!-- Planos / Soluções Sob Medida -->
+      <div id="planos" class="scroll-mt-24">
+        <div class="max-w-2xl mx-auto text-center mb-12 reveal">
+          <span class="text-xs font-display font-bold uppercase tracking-widest text-brand-cyan">Escolha o Formato Ideal</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy mt-2 mb-4">
+            Soluções Sob Medida para o Seu Negócio
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Estruturas pensadas para cada momento da sua empresa, sem mensalidade de servidor e com entrega ágil.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          
+          <!-- Plano 1: Landing Page Express -->
+          <div class="reveal bg-brand-bg rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-display font-bold text-brand-navy mb-4">
+                Entrada Rápida
+              </span>
+              <h3 class="font-display font-extrabold text-2xl text-brand-navy mb-2">Landing Page Express</h3>
+              <p class="text-sm text-slate-600 mb-6">
+                Ideal para profissionais autônomos e prestadores de serviço que precisam sair do link amador na bio com rapidez.
+              </p>
+
+              <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Página única responsiva (Mobile-First)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Apresentação de serviços e diferenciais</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Botões estratégicos diretos para WhatsApp</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Zero mensalidade de hospedagem básica</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20*Landing%20Page%20Express*%20da%20Sites.Gu.%20Gostaria%20de%20saber%20valores%20e%20prazos!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-4 px-5 min-h-[50px] rounded-2xl bg-white hover:bg-brand-navy text-brand-navy hover:text-white border-2 border-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 transition-all"
+            >
+              <span>Solicitar Landing Page Express</span>
+            </a>
+          </div>
+
+          <!-- Plano 2 (Destaque): Landing Page Pro + Agendamento Inteligente -->
+          <div class="reveal bg-brand-navy text-white rounded-3xl p-7 sm:p-8 border-2 border-brand-cyan shadow-navy flex flex-col justify-between relative">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-cyan text-brand-navy font-display font-extrabold text-xs uppercase tracking-wider shadow-sm whitespace-nowrap">
+              Mais Escolhido
+            </div>
+
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-brand-cyan text-xs font-display font-bold mb-4 mt-1">
+                Alta Conversão
+              </span>
+              <h3 class="font-display font-extrabold text-2xl text-white mb-2">
+                Landing Page Pro + Agendamento Inteligente
+              </h3>
+              <p class="text-sm text-slate-300 mb-6">
+                Perfeito para clínicas, estúdios de estética e barbearias que querem filtrar curiosos e receber pedidos prontos no WhatsApp.
+              </p>
+
+              <ul class="space-y-3 text-sm text-slate-200 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span><strong>Fluxo interativo de agendamento em 3 toques</strong></span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Catálogo de serviços com preços e duração</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Google Maps + Selo de Avaliações 5 Estrelas</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Resumo automático formatado para WhatsApp</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Otimizada para Instagram Bio e Tráfego Pago</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20*Landing%20Page%20Pro%20%2B%20Agendamento%20Inteligente*%20da%20Sites.Gu.%20Quero%20um%20or%C3%A7amento!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-4 px-5 min-h-[52px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 shadow-cyan transition-all hover:-translate-y-0.5"
+            >
+              <span>Quero o Plano Pro</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Plano 3: Catálogo & Bio Premium -->
+          <div class="reveal bg-brand-bg rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 rounded-full bg-white border border-brand-border text-xs font-display font-bold text-brand-navy mb-4">
+                Completo &amp; Escalável
+              </span>
+              <h3 class="font-display font-extrabold text-2xl text-brand-navy mb-2">Catálogo &amp; Bio Premium</h3>
+              <p class="text-sm text-slate-600 mb-6">
+                Para negócios com múltiplos profissionais, combos, cursos ou campanhas sazonais que exigem máxima autoridade.
+              </p>
+
+              <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Tudo do Plano Pro + múltiplas categorias</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Seleção de profissional ou unidade</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Seção dedicada a cursos, planos ou vouchers</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span class="text-brand-cyan font-extrabold">✓</span>
+                  <span>Suporte prioritário na publicação</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20*Cat%C3%A1logo%20%26%20Bio%20Premium*%20da%20Sites.Gu.%20Podemos%20conversar?"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-4 px-5 min-h-[50px] rounded-2xl bg-white hover:bg-brand-navy text-brand-navy hover:text-white border-2 border-brand-navy font-display font-extrabold text-sm flex items-center justify-center gap-2 transition-all"
+            >
+              <span>Solicitar Bio Premium</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. BANNER FINAL + RODAPÉ PROFISSIONAL + BOTÃO FLUTUANTE WHATSAPP      -->
+  <!-- ===================================================================== -->
+  <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal relative bg-brand-navy rounded-3xl p-8 sm:p-14 overflow-hidden shadow-navy text-center">
+        <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-cyan/20 blur-3xl pointer-events-none"></div>
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white leading-tight mb-4">
+            Pronto para transformar cliques da bio em clientes reais?
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mb-8">
+            Chame agora no WhatsApp, envie o segmento da sua empresa e receba sua proposta personalizada.
+          </p>
+          <a
+            href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20quero%20criar%20minha%20Landing%20Page%20profissional!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 px-7 py-4 min-h-[54px] rounded-2xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-sm sm:text-base shadow-cyan transition-all hover:-translate-y-0.5"
+          >
+            <span>Falar no WhatsApp • (11) 93396-6500</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-brand-border py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <!-- Logo SVG Sites.Gu -->
+      <a href="#" class="flex items-center gap-2.5" aria-label="Sites.Gu">
+        <svg class="w-9 h-9 shrink-0" viewBox="0 0 110 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M47 18H29C20.7157 18 14 24.7157 14 33C14 41.2843 20.7157 48 29 48H38C42.4183 48 46 51.5817 46 56C46 60.4183 42.4183 64 38 64H16" stroke="#0F213A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M47 26H29C25.134 26 22 29.134 22 33C22 36.866 25.134 40 29 40H38C46.8366 40 54 47.1634 54 56C54 64.8366 46.8366 72 38 72H16" stroke="#0F213A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M84 22C79.5 18.8 74 17 68 17C53.6406 17 42 28.6406 42 43C42 57.3594 53.6406 69 68 69C80.5 69 90.8 60.2 93.3 48.5H71" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M79 29C75.8 26.5 72 25 68 25C58.0589 25 50 33.0589 50 43C50 52.9411 58.0589 61 68 61C76.2 61 83.1 55.5 85.3 48" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M84 14L95 22L86 31" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M77 28L93 22" stroke="#00B4F0" stroke-width="5.5" stroke-linecap="round"/>
+        </svg>
+        <span class="font-display font-extrabold text-xl tracking-tight text-brand-navy">
+          SITES<span class="text-brand-cyan">.GU</span>
+        </span>
+      </a>
+
+      <div class="flex flex-wrap justify-center gap-5 text-xs sm:text-sm font-semibold text-slate-600">
+        <a href="#solucoes" class="hover:text-brand-navy">Soluções</a>
+        <a href="#portfolio" class="hover:text-brand-navy">4 Prévias</a>
+        <a href="#simulador" class="hover:text-brand-navy">Simulador</a>
+        <a href="#planos" class="hover:text-brand-navy">Planos</a>
+      </div>
+
+      <a
+        href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20rodap%C3%A9%20do%20site%20da%20Sites.Gu."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-xs sm:text-sm font-display font-bold text-brand-navy hover:text-brand-cyan transition-colors"
+      >
+        WhatsApp: (11) 93396-6500
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2.5 group">
+    <span class="hidden md:inline-block px-3.5 py-2 rounded-xl bg-brand-navy text-white font-display font-bold text-xs shadow-lg">
+      Falar no WhatsApp
+    </span>
+    <a
+      href="https://wa.me/5511933966500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Sites.Gu%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20Landing%20Pages."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+      class="relative w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center shadow-xl transition-transform duration-200 hover:scale-105 active:scale-95"
+    >
+      <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25 pointer-events-none"></span>
+      <svg class="w-7 h-7 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL INTERATIVO DAS 4 PRÉVIAS (TELA CHEIA NO CELULAR + VIEWPORT TOGGLE) -->
+  <!-- ===================================================================== -->
+  <div id="previewModal" class="fixed inset-0 z-50 hidden items-center justify-center sm:p-5 bg-brand-navy/80 backdrop-blur-sm">
+    <div class="bg-white w-full h-[100dvh] sm:h-auto sm:max-h-[92vh] sm:max-w-4xl sm:rounded-3xl shadow-2xl border-0 sm:border border-brand-border overflow-hidden flex flex-col">
+      
+      <!-- Modal Top Header -->
+      <div class="px-4 sm:px-6 py-3 bg-slate-50 border-b border-brand-border flex items-center justify-between gap-2 shrink-0">
+        <div class="flex items-center gap-2 min-w-0">
+          <span id="modalBadge" class="px-2.5 py-1 rounded-lg bg-brand-cyan/20 text-brand-navy font-display font-extrabold text-[11px] shrink-0">
+            Prévia ao Vivo
+          </span>
+          <h3 id="modalTitle" class="font-display font-extrabold text-sm sm:text-base text-brand-navy truncate">
+            Cílios da Mi (@_ciliosdami)
+          </h3>
+        </div>
+
+        <div class="flex items-center gap-2 shrink-0">
+          <!-- Desktop/Mobile Viewport Switcher (visible on sm+) -->
+          <div class="hidden sm:flex items-center bg-white p-1 rounded-xl border border-brand-border text-xs font-bold">
+            <button type="button" id="vpMobileBtn" onclick="setPreviewViewport('mobile')" class="px-3 py-1 rounded-lg bg-brand-navy text-white transition-colors cursor-pointer">
+              Celular (390px)
+            </button>
+            <button type="button" id="vpDesktopBtn" onclick="setPreviewViewport('desktop')" class="px-3 py-1 rounded-lg text-slate-600 hover:text-brand-navy transition-colors cursor-pointer">
+              Desktop
+            </button>
+          </div>
+
+          <button
+            type="button"
+            onclick="closeInteractivePreview()"
+            class="w-10 h-10 rounded-xl bg-white hover:bg-slate-100 border border-brand-border text-brand-navy flex items-center justify-center transition-colors cursor-pointer"
+            aria-label="Fechar prévia"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Mini-Site Body -->
+      <div class="flex-1 overflow-y-auto preview-scroll bg-brand-bg p-0 sm:p-6 flex justify-center">
+        <div id="modalViewportContainer" class="w-full sm:w-[390px] max-w-full bg-white sm:rounded-3xl sm:border border-brand-border sm:shadow-xl overflow-hidden transition-all duration-300 h-fit">
+          <div id="interactivePreviewMount"></div>
+        </div>
+      </div>
+
+      <!-- Modal Bottom Sales Bar -->
+      <div class="px-4 sm:px-6 py-3 bg-white border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-2.5 shrink-0">
+        <p class="text-xs text-slate-600 font-medium text-center sm:text-left">
+          Gostou dessa experiência? Criamos essa estrutura personalizada para o seu negócio.
+        </p>
+        <a
+          id="modalOrderCta"
+          href="https://wa.me/5511933966500"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-brand-cyan hover:bg-brand-cyanHover text-brand-navy font-display font-extrabold text-xs sm:text-sm shadow-cyan transition-all shrink-0"
+        >
+          <span>Quero um Site Assim</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: MOBILE DRAWER, HERO DEMO, ROI SIMULATOR & 4 PREVIEWS      -->
+  <!-- ===================================================================== -->
+  <script>
+    // -----------------------------------------------------------------------
+    // 1. Mobile Slide-Over Drawer Logic
+    // -----------------------------------------------------------------------
+    const mobileDrawerOpenBtn = document.getElementById('mobileDrawerOpenBtn');
+    const mobileDrawerCloseBtn = document.getElementById('mobileDrawerCloseBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+
+    function openMobileDrawer() {
+      mobileDrawerBackdrop.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        mobileDrawerBackdrop.classList.remove('opacity-0');
+        mobileDrawer.classList.remove('translate-x-full');
+      });
+      mobileDrawerOpenBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileDrawer() {
+      mobileDrawerBackdrop.classList.add('opacity-0');
+      mobileDrawer.classList.add('translate-x-full');
+      mobileDrawerOpenBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        mobileDrawerBackdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    mobileDrawerOpenBtn.addEventListener('click', openMobileDrawer);
+    mobileDrawerCloseBtn.addEventListener('click', closeMobileDrawer);
+    mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+    document.querySelectorAll('.drawer-link').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+
+    // -----------------------------------------------------------------------
+    // 2. Hero Live Smartphone Interactive Demo
+    // -----------------------------------------------------------------------
+    let heroSelectedService = 'Volume Brasileiro — R$ 130';
+    let heroSelectedTime = '14:00';
+    const heroPhoneSummary = document.getElementById('heroPhoneSummary');
+
+    function updateHeroPhoneSummary() {
+      heroPhoneSummary.textContent = `${heroSelectedService} • Hoje às ${heroSelectedTime}`;
+    }
+
+    document.querySelectorAll('.hero-phone-srv').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.hero-phone-srv').forEach(b => {
+          b.classList.remove('border-2', 'border-brand-cyan', 'bg-brand-cyan/10');
+          b.classList.add('border', 'border-slate-200', 'bg-white');
+        });
+        btn.classList.remove('border', 'border-slate-200', 'bg-white');
+        btn.classList.add('border-2', 'border-brand-cyan', 'bg-brand-cyan/10');
+        heroSelectedService = btn.getAttribute('data-service');
+        updateHeroPhoneSummary();
+      });
+    });
+
+    document.querySelectorAll('.hero-phone-time').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.hero-phone-time').forEach(b => {
+          b.classList.remove('bg-brand-navy', 'text-white');
+          b.classList.add('bg-brand-bg', 'text-brand-navy');
+        });
+        btn.classList.remove('bg-brand-bg', 'text-brand-navy');
+        btn.classList.add('bg-brand-navy', 'text-white');
+        heroSelectedTime = btn.getAttribute('data-time');
+        updateHeroPhoneSummary();
+      });
+    });
+
+    // -----------------------------------------------------------------------
+    // 3. Simulador Interativo de Faturamento (ROI)
+    // -----------------------------------------------------------------------
+    const visitsSlider = document.getElementById('visitsSlider');
+    const ticketSlider = document.getElementById('ticketSlider');
+    const visitsValue = document.getElementById('visitsValue');
+    const ticketValue = document.getElementById('ticketValue');
+    const basicClientsEl = document.getElementById('basicClients');
+    const basicRevenueEl = document.getElementById('basicRevenue');
+    const proClientsEl = document.getElementById('proClients');
+    const proRevenueEl = document.getElementById('proRevenue');
+    const extraClientsEl = document.getElementById('extraClients');
+    const extraRevenueEl = document.getElementById('extraRevenue');
+    const simulatorCta = document.getElementById('simulatorCta');
+
+    function formatBRL(val) {
+      return val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    function updateRoiSimulator() {
+      const visits = parseInt(visitsSlider.value, 10);
+      const ticket = parseInt(ticketSlider.value, 10);
+
+      visitsValue.textContent = visits.toLocaleString('pt-BR');
+      ticketValue.textContent = `R$ ${ticket}`;
+
+      const basicClients = Math.round(visits * 0.02);
+      const proClients = Math.round(visits * 0.065);
+      const extraClients = Math.max(1, proClients - basicClients);
+
+      basicClientsEl.textContent = `${basicClients} clientes`;
+      basicRevenueEl.textContent = formatBRL(basicClients * ticket);
+
+      proClientsEl.textContent = `${proClients} clientes`;
+      proRevenueEl.textContent = formatBRL(proClients * ticket);
+
+      extraClientsEl.textContent = extraClients;
+      extraRevenueEl.textContent = formatBRL(extraClients * ticket);
+
+      const text = encodeURIComponent(
+        `Olá! Fiz a simulação no site da Sites.Gu (${visits} visitas/mês e ticket médio de R$ ${ticket}) e quero gerar +${extraClients} clientes extras por mês com uma Landing Page!`
+      );
+      simulatorCta.href = `https://wa.me/5511933966500?text=${text}`;
+    }
+
+    visitsSlider.addEventListener('input', updateRoiSimulator);
+    ticketSlider.addEventListener('input', updateRoiSimulator);
+    updateRoiSimulator();
+
+    // -----------------------------------------------------------------------
+    // 4. Engine Interativa Real das 4 Prévias no Modal
+    // -----------------------------------------------------------------------
+    const previewModal = document.getElementById('previewModal');
+    const modalBadge = document.getElementById('modalBadge');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalViewportContainer = document.getElementById('modalViewportContainer');
+    const interactivePreviewMount = document.getElementById('interactivePreviewMount');
+    const modalOrderCta = document.getElementById('modalOrderCta');
+    const vpMobileBtn = document.getElementById('vpMobileBtn');
+    const vpDesktopBtn = document.getElementById('vpDesktopBtn');
+
+    const previewCatalogs = {
+      cilios: {
+        badge: 'Case Real • Guarulhos - SP',
+        title: 'Cílios da Mi (@_ciliosdami)',
+        businessName: 'Cílios da Mi (@_ciliosdami)',
+        subtitle: 'Especialista em Extensão de Cílios, Sobrancelhas & Unhas em Gel',
+        address: 'Rua Zeferino Alves de Oliveira, 1051 - Jardim Ponte Alta, Guarulhos - SP',
+        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rua+Zeferino+Alves+de+Oliveira+1051+Jardim+Ponte+Alta+Guarulhos+SP',
+        ratingText: '5.0 ★ no Google Avaliações (148 avaliações)',
+        theme: {
+          headerBg: 'bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900',
+          accentBg: 'bg-pink-600',
+          accentText: 'text-pink-700',
+          accentSoft: 'bg-pink-50 border-pink-200',
+          pillBg: 'bg-pink-100 text-pink-900'
+        },
+        step2Label: '2. Escolha o Dia e Horário',
+        optionsTitle: '1. Selecione seu Procedimento',
+        services: [
+          { id: 'vb', name: 'Volume Brasileiro', desc: 'Fios tecnológicos com retenção alta (1h30)', price: 'R$ 130,00' },
+          { id: 'mv', name: 'Mega Volume', desc: 'Olhar marcante e super preenchido (2h00)', price: 'R$ 160,00' },
+          { id: 'dh', name: 'Design com Henna', desc: 'Alinhamento estratégico + henna (45min)', price: 'R$ 55,00' },
+          { id: 'ag', name: 'Alongamento em Gel', desc: 'Unhas naturais e resistentes (1h40)', price: 'R$ 110,00' }
+        ],
+        specialistsLabel: 'Profissional',
+        specialists: ['Milena (Especialista Master)'],
+        dates: ['Hoje', 'Amanhã', 'Sábado'],
+        times: ['09:30', '13:30', '16:00', '18:30'],
+        voucherMode: false,
+        orderMsg: 'Olá! Testei a prévia interativa do case Cílios da Mi na Sites.Gu e quero uma página nesse padrão!'
+      },
+
+      odonto: {
+        badge: 'Prévia 02 • Odontologia',
+        title: 'OdontoPrime Estética',
+        businessName: 'OdontoPrime Estética',
+        subtitle: 'Odontologia Moderna, Lentes em Porcelana & Harmonização',
+        address: 'Av. Paulista, 1450 - Bela Vista, São Paulo - SP',
+        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Av+Paulista+1450+Sao+Paulo',
+        ratingText: '4.9 ★ no Google Avaliações (+240 pacientes)',
+        theme: {
+          headerBg: 'bg-gradient-to-br from-[#0F213A] via-[#162F52] to-[#0B192C]',
+          accentBg: 'bg-[#00B4F0]',
+          accentText: 'text-[#0096C7]',
+          accentSoft: 'bg-sky-50 border-sky-200',
+          pillBg: 'bg-sky-100 text-[#0F213A]'
+        },
+        step2Label: '3. Selecione Data e Horário',
+        optionsTitle: '1. Qual procedimento você procura?',
+        services: [
+          { id: 'lp', name: 'Limpeza & Profilaxia', desc: 'Remoção de tártaro + jato de bicarbonato', price: 'R$ 180,00' },
+          { id: 'cl', name: 'Clareamento a Laser', desc: 'Sessão clínica com dessensibilizante', price: 'R$ 490,00' },
+          { id: 'le', name: 'Lentes em Porcelana', desc: 'Avaliação + planejamento digital 3D', price: 'Avaliação VIP' },
+          { id: 'ao', name: 'Avaliação Ortodôntica', desc: 'Alinhadores invisíveis e aparelho estético', price: 'Consulta Inicial' }
+        ],
+        specialistsLabel: '2. Escolha o Especialista',
+        specialists: ['Dra. Camila Alves (Estética)', 'Dr. Rafael Mendes (Implantes)'],
+        dates: ['Hoje', 'Amanhã', 'Quinta'],
+        times: ['10:00', '14:30', '17:00', '19:00'],
+        voucherMode: false,
+        orderMsg: 'Olá! Testei a prévia interativa OdontoPrime Estética na Sites.Gu e quero criar uma página assim para minha clínica!'
+      },
+
+      barber: {
+        badge: 'Prévia 03 • Barbearia',
+        title: 'BarberClub VIP',
+        businessName: 'BarberClub VIP',
+        subtitle: 'Cortes de Precisão, Barboterapia & Assinaturas Mensais',
+        address: 'Rua Augusta, 2190 - Jardins, São Paulo - SP',
+        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rua+Augusta+2190+Sao+Paulo',
+        ratingText: '5.0 ★ no Google Avaliações (310 avaliações)',
+        theme: {
+          headerBg: 'bg-gradient-to-br from-zinc-950 via-zinc-900 to-stone-900',
+          accentBg: 'bg-amber-500',
+          accentText: 'text-amber-600',
+          accentSoft: 'bg-amber-50 border-amber-200',
+          pillBg: 'bg-amber-100 text-zinc-900'
+        },
+        step2Label: '3. Horário no Mesmo Dia',
+        optionsTitle: '1. Escolha o Serviço ou Plano VIP',
+        services: [
+          { id: 'cd', name: 'Corte Degradê / Social', desc: 'Lavagem + finalização com pomada (40min)', price: 'R$ 50,00' },
+          { id: 'cb', name: 'Combo Corte + Barba', desc: 'Toalha quente + ozonioterapia (1h)', price: 'R$ 80,00' },
+          { id: 'vip', name: 'Assinatura Clube VIP Mensal', desc: 'Cortes ilimitados de seg. a sáb.', price: 'R$ 129,90/mês' },
+          { id: 'bt', name: 'Barboterapia Premium', desc: 'Alinhamento na navalha + hidratação', price: 'R$ 45,00' }
+        ],
+        specialistsLabel: '2. Selecione seu Barbeiro',
+        specialists: ['Lucas Silva', 'Matheus Rocha', 'Diego Costa'],
+        dates: ['Hoje', 'Amanhã', 'Sábado'],
+        times: ['11:00', '15:00', '17:30', '19:30'],
+        voucherMode: false,
+        orderMsg: 'Olá! Testei a prévia interativa BarberClub VIP na Sites.Gu e quero criar uma página assim para minha barbearia!'
+      },
+
+      aura: {
+        badge: 'Prévia 04 • Clínica Estética',
+        title: 'Aura Estética Avançada',
+        businessName: 'Aura Estética Avançada',
+        subtitle: 'Protocolos Faciais & Corporais + Voucher de Avaliação Gratuita',
+        address: 'Alameda Santos, 980 - Cerqueira César, São Paulo - SP',
+        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Alameda+Santos+980+Sao+Paulo',
+        ratingText: '4.9 ★ no Google Avaliações (195 avaliações)',
+        theme: {
+          headerBg: 'bg-gradient-to-br from-teal-950 via-emerald-900 to-teal-900',
+          accentBg: 'bg-emerald-500',
+          accentText: 'text-emerald-700',
+          accentSoft: 'bg-emerald-50 border-emerald-200',
+          pillBg: 'bg-emerald-100 text-teal-950'
+        },
+        step2Label: '3. Dia e Horário Expresso',
+        optionsTitle: '1. Qual é o seu Objetivo Estético?',
+        services: [
+          { id: 'rf', name: 'Rejuvenescimento Facial', desc: 'Bioestimuladores + protocolo revitalizante', price: 'Avaliação Grátis' },
+          { id: 'gl', name: 'Redução de Gordura Localizada', desc: 'Criolipólise e enzimas de alta performance', price: 'Avaliação Grátis' },
+          { id: 'lp', name: 'Limpeza de Pele Profunda', desc: 'Extração ultrassônica + peeling de diamante', price: 'R$ 140,00' },
+          { id: 'hc', name: 'Drenagem & Modeladora VIP', desc: 'Protocolo detox corporal imediato', price: 'R$ 120,00' }
+        ],
+        specialistsLabel: '2. Unidade / Especialista',
+        specialists: ['Dra. Beatriz Nunes (Biomédica Esteta)'],
+        dates: ['Hoje', 'Amanhã', 'Sexta'],
+        times: ['10:30', '14:00', '16:30', '18:00'],
+        voucherMode: true,
+        orderMsg: 'Olá! Testei a prévia interativa Aura Estética Avançada (com funil e voucher) na Sites.Gu e quero um site assim!'
+      }
+    };
+
+    // Active interactive preview state
+    let currentPreviewKey = 'cilios';
+    let bookingState = {
+      serviceIdx: 0,
+      specialistIdx: 0,
+      dateIdx: 0,
+      timeIdx: 0,
+      clientName: '',
+      confirmed: false,
+      voucherCode: ''
+    };
+
+    function openInteractivePreview(key) {
+      const cfg = previewCatalogs[key];
+      if (!cfg) return;
+
+      currentPreviewKey = key;
+      bookingState = {
+        serviceIdx: 0,
+        specialistIdx: 0,
+        dateIdx: 0,
+        timeIdx: 0,
+        clientName: '',
+        confirmed: false,
+        voucherCode: 'AURA-' + Math.floor(1000 + Math.random() * 9000)
+      };
+
+      modalBadge.textContent = cfg.badge;
+      modalTitle.textContent = cfg.title;
+      modalOrderCta.href = `https://wa.me/5511933966500?text=${encodeURIComponent(cfg.orderMsg)}`;
+
+      renderInteractivePreview();
+      previewModal.classList.remove('hidden');
+      previewModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeInteractivePreview() {
+      previewModal.classList.add('hidden');
+      previewModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function setPreviewViewport(mode) {
+      if (mode === 'desktop') {
+        modalViewportContainer.classList.remove('sm:w-[390px]');
+        modalViewportContainer.classList.add('sm:w-full');
+        vpDesktopBtn.classList.add('bg-brand-navy', 'text-white');
+        vpDesktopBtn.classList.remove('text-slate-600');
+        vpMobileBtn.classList.remove('bg-brand-navy', 'text-white');
+        vpMobileBtn.classList.add('text-slate-600');
+      } else {
+        modalViewportContainer.classList.remove('sm:w-full');
+        modalViewportContainer.classList.add('sm:w-[390px]');
+        vpMobileBtn.classList.add('bg-brand-navy', 'text-white');
+        vpMobileBtn.classList.remove('text-slate-600');
+        vpDesktopBtn.classList.remove('bg-brand-navy', 'text-white');
+        vpDesktopBtn.classList.add('text-slate-600');
+      }
+    }
+
+    function selectPreviewOption(field, index) {
+      bookingState[field] = index;
+      bookingState.confirmed = false;
+      renderInteractivePreview();
+    }
+
+    function confirmPreviewBooking() {
+      const nameInput = document.getElementById('previewClientNameInput');
+      const nameErr = document.getElementById('previewNameError');
+      const val = nameInput ? nameInput.value.trim() : '';
+
+      if (!val) {
+        if (nameInput) {
+          nameInput.classList.add('border-rose-500', 'ring-2', 'ring-rose-200');
+          nameInput.focus();
+        }
+        if (nameErr) nameErr.classList.remove('hidden');
+        return;
+      }
+
+      bookingState.clientName = val;
+      bookingState.confirmed = true;
+      renderInteractivePreview();
+    }
+
+    function renderInteractivePreview() {
+      const cfg = previewCatalogs[currentPreviewKey];
+      const selectedService = cfg.services[bookingState.serviceIdx];
+      const selectedSpecialist = cfg.specialists[bookingState.specialistIdx];
+      const selectedDate = cfg.dates[bookingState.dateIdx];
+      const selectedTime = cfg.times[bookingState.timeIdx];
+
+      // Build structured WhatsApp confirmation text
+      const voucherLine = cfg.voucherMode ? `\n🎟️ *Voucher Gerado:* ${bookingState.voucherCode}` : '';
+      const structuredWhatsAppMessage =
+        `Olá! Vim pelo site da *Sites.Gu* testando a prévia de *${cfg.businessName}*:\n\n` +
+        `👤 *Cliente:* ${bookingState.clientName || 'Visitante'}\n` +
+        `✨ *Serviço:* ${selectedService.name} (${selectedService.price})\n` +
+        `🩺 *Profissional:* ${selectedSpecialist}\n` +
+        `📅 *Data/Horário:* ${selectedDate} às ${selectedTime}` +
+        voucherLine +
+        `\n\nQuero criar uma página com agendamento assim para o meu negócio!`;
+
+      const waConfirmUrl = `https://wa.me/5511933966500?text=${encodeURIComponent(structuredWhatsAppMessage)}`;
+
+      interactivePreviewMount.innerHTML = `
+        <div class="bg-white text-slate-800 font-sans">
+          <!-- Mini-Site Brand Header -->
+          <div class="${cfg.theme.headerBg} text-white p-5 sm:p-6">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-white/15 text-white text-[11px] font-bold">
+                ${cfg.ratingText}
+              </span>
+            </div>
+            <h4 class="font-display font-extrabold text-xl sm:text-2xl leading-tight">${cfg.businessName}</h4>
+            <p class="text-xs sm:text-sm text-white/85 mt-1">${cfg.subtitle}</p>
+
+            <!-- Address & Google Maps Link -->
+            <div class="mt-4 pt-3 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-white/90">
+              <span class="leading-snug">📍 ${cfg.address}</span>
+              <a
+                href="${cfg.mapsUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/15 hover:bg-white/25 text-white font-bold shrink-0 w-fit"
+              >
+                <span>Ver no Maps ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive 3-Step Booking Engine -->
+          <div class="p-4 sm:p-6 space-y-5">
+            
+            <!-- Step 1: Service Selection -->
+            <div>
+              <p class="font-display font-extrabold text-sm text-brand-navy mb-2.5">${cfg.optionsTitle}</p>
+              <div class="space-y-2">
+                ${cfg.services.map((srv, idx) => {
+                  const active = idx === bookingState.serviceIdx;
+                  return `
+                    <button
+                      type="button"
+                      onclick="selectPreviewOption('serviceIdx', ${idx})"
+                      class="w-full p-3 rounded-2xl border-2 text-left transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                        active ? `${cfg.theme.accentSoft} border-brand-navy` : 'bg-white border-slate-200 hover:border-slate-300'
+                      }"
+                    >
+                      <div>
+                        <p class="font-display font-bold text-xs sm:text-sm text-brand-navy">${srv.name}</p>
+                        <p class="text-[11px] text-slate-500 mt-0.5">${srv.desc}</p>
+                      </div>
+                      <span class="font-display font-extrabold text-xs sm:text-sm ${cfg.theme.accentText} shrink-0">
+                        ${srv.price}
+                      </span>
+                    </button>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <!-- Specialist Selection (if multiple) -->
+            ${cfg.specialists.length > 1 ? `
+              <div>
+                <p class="font-display font-extrabold text-sm text-brand-navy mb-2">${cfg.specialistsLabel}</p>
+                <div class="flex flex-wrap gap-2">
+                  ${cfg.specialists.map((sp, idx) => {
+                    const active = idx === bookingState.specialistIdx;
+                    return `
+                      <button
+                        type="button"
+                        onclick="selectPreviewOption('specialistIdx', ${idx})"
+                        class="px-3 py-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
+                          active ? 'bg-brand-navy text-white border-brand-navy' : 'bg-brand-bg text-brand-navy border-brand-border hover:bg-slate-200'
+                        }"
+                      >
+                        ${sp}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Date & Time Picker -->
+            <div>
+              <p class="font-display font-extrabold text-sm text-brand-navy mb-2.5">${cfg.step2Label}</p>
+              
+              <!-- Dates -->
+              <div class="grid grid-cols-3 gap-2 mb-2.5">
+                ${cfg.dates.map((dt, idx) => {
+                  const active = idx === bookingState.dateIdx;
+                  return `
+                    <button
+                      type="button"
+                      onclick="selectPreviewOption('dateIdx', ${idx})"
+                      class="py-2.5 px-2 rounded-xl text-xs font-display font-bold border transition-all cursor-pointer ${
+                        active ? `${cfg.theme.pillBg} border-brand-navy` : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                      }"
+                    >
+                      ${dt}
+                    </button>
+                  `;
+                }).join('')}
+              </div>
+
+              <!-- Times -->
+              <div class="grid grid-cols-4 gap-2">
+                ${cfg.times.map((tm, idx) => {
+                  const active = idx === bookingState.timeIdx;
+                  return `
+                    <button
+                      type="button"
+                      onclick="selectPreviewOption('timeIdx', ${idx})"
+                      class="py-2.5 px-2 rounded-xl text-xs font-display font-bold border transition-all cursor-pointer ${
+                        active ? 'bg-brand-navy text-white border-brand-navy' : 'bg-brand-bg text-brand-navy border-brand-border hover:bg-slate-200'
+                      }"
+                    >
+                      ${tm}
+                    </button>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <!-- Client Name & Confirm Button -->
+            <div class="pt-2 border-t border-slate-100">
+              <label for="previewClientNameInput" class="block font-display font-extrabold text-sm text-brand-navy mb-1.5">
+                Seu Nome para Reserva
+              </label>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input
+                  id="previewClientNameInput"
+                  type="text"
+                  value="${bookingState.clientName.replace(/"/g, '&quot;')}"
+                  placeholder="Ex: Ana Paula"
+                  class="flex-1 px-3.5 py-3 rounded-xl border border-slate-300 text-sm text-brand-navy focus:outline-none focus:border-brand-cyan"
+                />
+                <button
+                  type="button"
+                  onclick="confirmPreviewBooking()"
+                  class="px-5 py-3 min-h-[46px] rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white font-display font-bold text-xs sm:text-sm transition-colors cursor-pointer shrink-0"
+                >
+                  Confirmar Horário
+                </button>
+              </div>
+              <p id="previewNameError" class="hidden text-xs font-semibold text-rose-600 mt-1.5">
+                Digite seu nome acima para gerar o resumo do agendamento.
+              </p>
+            </div>
+
+            <!-- Structured Confirmation Summary Card -->
+            ${bookingState.confirmed ? `
+              <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-500/40 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white font-display font-bold text-[11px]">
+                    ✓ Pré-Agendamento Gerado
+                  </span>
+                  ${cfg.voucherMode ? `<span class="font-mono font-extrabold text-xs text-emerald-900 bg-white px-2.5 py-1 rounded-lg border border-emerald-200">${bookingState.voucherCode}</span>` : ''}
+                </div>
+
+                <div class="text-xs text-slate-700 space-y-1 bg-white p-3.5 rounded-xl border border-emerald-200/80">
+                  <p><strong>Cliente:</strong> ${bookingState.clientName}</p>
+                  <p><strong>Procedimento:</strong> ${selectedService.name} (${selectedService.price})</p>
+                  <p><strong>Profissional:</strong> ${selectedSpecialist}</p>
+                  <p><strong>Data e Hora:</strong> ${selectedDate} às ${selectedTime}</p>
+                  ${cfg.voucherMode ? `<p class="text-emerald-700 font-bold pt-1">🎁 Voucher Digital de Avaliação Gratuita Ativado!</p>` : ''}
+                </div>
+
+                <a
+                  href="${waConfirmUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white font-display font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-all"
+                >
+                  <span>Enviar Resumo no WhatsApp Agora →</span>
+                </a>
+              </div>
+            ` : ''}
+
+          </div>
+        </div>
+      `;
+    }
+
+    // Backdrop & Escape Key Close
+    previewModal.addEventListener('click', (e) => {
+      if (e.target === previewModal) closeInteractivePreview();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!previewModal.classList.contains('hidden')) closeInteractivePreview();
+        if (!mobileDrawer.classList.contains('translate-x-full')) closeMobileDrawer();
+      }
+    });
+
+    // -----------------------------------------------------------------------
+    // 5. Scroll Reveal Animation Observer
+    // -----------------------------------------------------------------------
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
